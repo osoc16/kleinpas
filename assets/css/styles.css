@@ -300,13 +300,13 @@ footer {
 footer img {
     margin-bottom: 3em;
     position: relative;
-    top: 4em;
+    top: 8em;
 }
 
 footer p {
     font-size: 1.8em;
     padding-top: 2em;
-    padding-bottom: 2em;
+    padding-bottom: 4em;
     font-weight: 600;
 }
 
