@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+    
+    <head lang="nl">
+        <meta charset="utf-8" >
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Kleinpas</title>
+        <meta name="description" content="Vind je babysit bij Kleinpas">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.3.2/css/simple-line-icons.css">
+        <link href="https://fonts.googleapis.com/css?family=Karla|Montserrat" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/styles.css">
+
+    </head>
+    <body>
+        <div class="logo"><img src="assets/img/logo_kleinpas.png" class="lol"></div>
+        <img src="assets/img/illustration_header.svg" class="illustration-main">
+        <div class="content-notify">
+            <h1>Heb jij een oppas nodig binnenkort?</h1>
+            <p class="vraag">Wanneer heb je een oppas nodig?</p>
+            
+                <div class="date-time">
+                    <span class="time-field">
+                        <i class="lines-icon icon-calendar dt-icon"></i>
+                        <p>Dag:</p>
+                        <input type="date" name="babysit-date" id="babysit-date"/>
+                    </span>
+                    <span class="time-field">
+                        <i class="lines-icon icon-clock dt-icon"></i>
+                        <p>Uur:</p>
+                        <span id="uur-field">
+                            <select name="start-hour">
+                                <option value="00">00</option>
+                                <option value="01">01</option>
+                                <option value="02">02</option>
+                                <option value="03">03</option>
+                                <option value="04">04</option>
+                                <option value="05">05</option>
+                                <option value="06">06</option>
+                                <option value="07">07</option>
+                                <option value="08">08</option>
+                                <option value="09">09</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                                <option value="15">15</option>
+                                <option value="16">16</option>
+                                <option value="17">17</option>
+                                <option value="18">18</option>
+                                <option value="19">19</option>
+                                <option value="20">20</option>
+                                <option value="21">21</option>
+                                <option value="22">22</option>
+                                <option value="23">23</option>
+                            </select>
+                            <i>h</i>
+                            <select name="start-minute">
+                                <option value="00">00</option>
+                                <option value="30">30</option>
+                            </select>
+                            <i id="tot">tot</i>
+                            <select name="end-hour">
+                                <option value="00">00</option>
+                                <option value="01">01</option>
+                                <option value="02">02</option>
+                                <option value="03">03</option>
+                                <option value="04">04</option>
+                                <option value="05">05</option>
+                                <option value="06">06</option>
+                                <option value="07">07</option>
+                                <option value="08">08</option>
+                                <option value="09">09</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                                <option value="15">15</option>
+                                <option value="16">16</option>
+                                <option value="17">17</option>
+                                <option value="18">18</option>
+                                <option value="19">19</option>
+                                <option value="20">20</option>
+                                <option value="21">21</option>
+                                <option value="22">22</option>
+                                <option value="23">23</option>
+                            </select>
+                            <i>h</i>
+                            <select name="end-minute">
+                                <option value="00">00</option>
+                                <option value="30">30</option>
+                            </select>
+                        </span>
+                    </span>
+                </div>
+
+            <p class="vraag">Hoe wil je verwittigd worden?</p>
+            <div class="notify-buttons">
+                <div class="button-n-field">
+                    <div class="notify-button">
+                        <div class="button-content">
+                            <i class="notify-icon lines-icon icon-speech"></i>
+                            <p class="notify-button-text">Sms me</p>
+                            <a href="#"><span class="button-link"></span></a>
+                        </div>
+                    </div>
+                    <div class="notify-field">
+                        <input type="text" name="phone" id="phone" placeholder="+XX XXX XXX XXX"/>
+                    </div>
+                </div>
+                <div class="button-n-field">
+                    <div class="notify-button">
+                        <div class="button-content">
+                            <i class="notify-icon lines-icon icon-envelope"></i>
+                            <p class="notify-button-text">Mail me</p>
+                            <a href="#"><span class="button-link"></span></a>
+                        </div>
+                    </div>
+                    <div class="notify-field">
+                        <input type="email" name="email" id="email" placeholder="xxx@yyy.zzz"/>
+                    </div>
+                </div>
+                <div class="button-n-field">
+                    <div class="notify-button">
+                        <div class="button-content">
+                            <i class="notify-icon lines-icon icon-calendar"></i>
+                            <p class="notify-button-text">Calendar</p>
+                            <a href="#"><span class="button-link"></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button>Herinner mij!</button>
+
+            <div class="promo">
+                <div class="promo-part">
+                    <p>
+                        Kleinpas helpt je enkele weken voor het event zoeken naar een geschikte babysit
+                    </p>
+                </div>
+                <div class="promo-part">
+                    <p>
+                        Dankzij kleinpas worden culturele activiteiten toegankelijker voor jongeren
+                    </p>
+                </div>
+                <div class="promo-part">
+                    <p>
+                        Jij vergeet dan niet meer een babysit vast te leggen en komt niet voor een verrassing te staan.
+                    </p>
+                </div>
+            </div>
+            <div class="promo-pictures">
+                <img src="assets/img/puppet3.png" class="puppet">
+                <img src="assets/img/puppet2.png" class="puppet">
+                <img src="assets/img/puppet1.png" class="puppet">
+            </div>
+        </div>
+
+        <footer>
+            <img src= "assets/img/logo_kleinpas.png" class="footer_logo">
+            <p class="footer_text">Een project van open Summer of code 2016</p>          
+        </footer>
+    </body>
+</html>
