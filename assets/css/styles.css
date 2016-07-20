@@ -312,6 +312,12 @@ footer p {
     font-weight: 600;
 }
 
+@media (max-width: 1400px) {
+    .promo-part p {
+        padding-bottom: 2em;
+    }
+}
+
 @media (max-width: 1300px) {
     .dt-icon {
         margin-left: 2em;
