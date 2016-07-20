@@ -272,7 +272,7 @@ p {
     color: rgb(251, 251, 251);
     font-weight: 600;
     line-height: 1.6em;
-    height: 7em;
+    height: 9em;
 }
 
 .promo-pictures {
@@ -310,14 +310,34 @@ footer p {
     font-weight: 600;
 }
 
+@media (min-width: 1150px) {
+    footer img {
+        top: 6em;
+    }
+
+    footer p {
+        padding-top: 2em;
+    }
+}
+
 @media (max-width: 1300px) {
     .dt-icon {
         margin-left: 2em;
         margin-right: 2em;
-    }   
+    }
+
+    .promo {
+        height: 400px;
+    }
 }
 
-@media (max-width: 1030px) {
+@media (max-width: 1060px) {
+    .promo {
+        height: 450px;
+    }
+}
+
+@media (max-width: 1035px) {
     div.date-time {
         height: 10em;
     }
@@ -326,4 +346,3 @@ footer p {
         margin-top: 1em;
     }
 }
-
