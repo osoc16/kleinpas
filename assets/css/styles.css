@@ -143,6 +143,7 @@ i#tot {
     text-align: center;
     position: relative;
     z-index: 1;
+    cursor: pointer;
 }
 
 .button-link {
@@ -196,9 +197,12 @@ p {
     width: 196px;
     height: 205px;
     position: relative;
-    bottom: 150px;
+    bottom: 205px;
     z-index: 0;
+    transition: 0.5s ease;
 }
+
+
 
 .notify-field input {
     z-index: 1;
@@ -272,7 +276,7 @@ p {
     color: rgb(251, 251, 251);
     font-weight: 600;
     line-height: 1.6em;
-    height: 9em;
+    height: 7em;
 }
 
 .promo-pictures {
@@ -298,46 +302,24 @@ footer {
 }
 
 footer img {
+    margin-top: 4em;
     margin-bottom: 3em;
-    position: relative;
-    top: 8em;
 }
 
 footer p {
     font-size: 1.8em;
-    padding-top: 4em;
     padding-bottom: 2em;
     font-weight: 600;
-}
-
-@media (min-width: 1150px) {
-    footer img {
-        top: 6em;
-    }
-
-    footer p {
-        padding-top: 2em;
-    }
 }
 
 @media (max-width: 1300px) {
     .dt-icon {
         margin-left: 2em;
         margin-right: 2em;
-    }
-
-    .promo {
-        height: 400px;
-    }
+    }   
 }
 
-@media (max-width: 1060px) {
-    .promo {
-        height: 450px;
-    }
-}
-
-@media (max-width: 1035px) {
+@media (max-width: 1030px) {
     div.date-time {
         height: 10em;
     }
@@ -346,3 +328,4 @@ footer p {
         margin-top: 1em;
     }
 }
+
