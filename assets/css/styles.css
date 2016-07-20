@@ -65,7 +65,6 @@ div.date-time {
     background-color: rgb(251, 251, 251);
     margin-left: -2%;
     margin-right: -2%;
-    height: 5em;
     border-bottom: 2px solid rgb(255, 96, 84);
 }
 
@@ -76,6 +75,7 @@ div.date-time {
 .time-field {
     font-size: 1.3em;
     letter-spacing: 1px;
+    margin-bottom: 10px;
 }
 
 .dt-icon {
@@ -327,7 +327,6 @@ footer p {
 
 @media (max-width: 1030px) {
     div.date-time {
-        height: 10em;
     }
 
     .dt-icon {
