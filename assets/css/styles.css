@@ -313,8 +313,8 @@ footer p {
 }
 
 @media (max-width: 1400px) {
-    .promo-part p {
-        padding-bottom: 2em;
+    .promo {
+        height: 310px;
     }
 }
 
