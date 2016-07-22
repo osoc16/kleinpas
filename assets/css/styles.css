@@ -1,5 +1,9 @@
 * { padding: 0; margin: 0;}
 
+body {
+    position: relative;
+}
+
 h1 {
     font-size: 3em;
     font-family: 'Montserrat';
@@ -15,7 +19,11 @@ h1 {
 
 .logo {
     text-align: center;
-    margin: 25px 0;
+    margin: 20px 0 15px 0;
+}
+
+.logo img {
+    width: 100px;
 }
 
 img.illustration-main {
@@ -30,6 +38,7 @@ p.vraag {
     padding: 3%;
     font-weight: 200;
     font-size: 1.3em;
+    text-align: center;
 }
 
 button {
@@ -48,12 +57,13 @@ button {
     position: absolute;
     left: 0;
     right: 0;
+    margin-top: 2em;
+    cursor: pointer;
 }
 
 div.content-notify {
     box-shadow: 0px 0px 63.05px 2px rgba(0, 0, 0, 0.06);
     width: 85%;
-    height: 1300px;
     border-radius: 10px 10px 0 0;
     background-color: rgb(255, 255, 255);
     margin: 0 auto;
@@ -62,10 +72,14 @@ div.content-notify {
 
 div.date-time {
     border-radius: 10px;
-    background-color: rgb(251, 251, 251);
-    margin-left: -2%;
-    margin-right: -2%;
+    background-color: rgb(244, 244, 244);
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    min-width: 35em;
     border-bottom: 2px solid rgb(255, 96, 84);
+    margin-top: em;
+    margin-bottom: 2.5em;
 }
 
 .date-time * {
@@ -76,12 +90,13 @@ div.date-time {
     font-size: 1.3em;
     letter-spacing: 1px;
     margin-bottom: 10px;
+    display: block;
+    margin-left: 3em;
 }
 
 .dt-icon {
     margin-top: .8em;
-    margin-left: 5em;
-    margin-right: 3em;
+    margin-right: 1.5em;
     font-size: 1.5em;
     color: rgb(255, 96, 84);
 }
@@ -136,7 +151,7 @@ i#tot {
 
 .notify-button {
     border-radius: 10px;
-    background-color: rgb(251, 251, 251);
+    background-color: rgb(244, 244, 244);
     width: 196px;
     height: 205px;
     border-bottom: 2px solid rgb(255, 96, 84);
@@ -202,7 +217,18 @@ p {
     transition: 0.5s ease;
 }
 
+#textme {
+    bottom: 150px;
+}
 
+.white-line {
+    width: 176px;
+    position: absolute;
+    bottom: 20px;
+    left: 10px;
+    height: 2px;
+    background-color: rgb(251, 251, 251);
+}
 
 .notify-field input {
     z-index: 1;
@@ -220,7 +246,6 @@ p {
 }
 
 .notify-field input:focus {
-    text-decoration: underline;
 }
 
 .notify-field input::-webkit-input-placeholder { /* Chrome */
@@ -248,17 +273,26 @@ p {
     color: white;
     background-color: rgb(255, 96, 84);
     width: 100%;
-    box-sizing: border-box;-
+    box-sizing: border-box;
     text-align: center;
     font-size: 0.9em;
     font-family: "Karla";
-    height: 240px;
-    margin-top: 8%;
+    margin-top: 15%;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+}
+
+.promo-texts {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    width: 100%;
+    margin: 0;
+    flex-grow: 2;
     padding-left: 5%;
     padding-right: 5%;
+    box-sizing: border-box;
 }
 
 .promo-part {
@@ -273,32 +307,49 @@ p {
     font-size: 1.3em;
     margin-top: 2.5em;
     padding-right: 3em;
+    padding-bottom: 2em;
     color: rgb(251, 251, 251);
     font-weight: 600;
     line-height: 1.4em;
-    height: 7em;
 }
 
 .promo-pictures {
     display: flex;
     width: 100%;
     flex-direction: row;
-    justify-content: space-around;
-    position: relative;
-    bottom: 6.5em;
+    justify-content: space-between;
+    height: 220px;
+    padding: 0;
+    margin: 0;
+    padding-left: 5%;
+    padding-right: 5%;
+    box-sizing: border-box;
+    align-items: flex-start;
 }
 
 .puppet {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 2.4em;
     object-fit: none;
+    z-index: 3;
+}
+
+.grey-background {
+    background-color: rgb(244, 244, 244);
+    height: 185px;
+    z-index: 2;
+    display: block;
+    position: absolute;
+    bottom: 265px;
+    left: 0;
+    right: 0;
 }
 
 footer {
     text-align: center;
-    background-color: rgb(251, 251, 251);
+    background-color: rgb(244, 244, 244);
+    height: 270px;
 }
 
 footer img {
@@ -311,26 +362,3 @@ footer p {
     padding-bottom: 2em;
     font-weight: 600;
 }
-
-@media (max-width: 1400px) {
-    .promo {
-        height: 310px;
-    }
-}
-
-@media (max-width: 1300px) {
-    .dt-icon {
-        margin-left: 2em;
-        margin-right: 2em;
-    }   
-}
-
-@media (max-width: 1030px) {
-    div.date-time {
-    }
-
-    .dt-icon {
-        margin-top: 1em;
-    }
-}
-
