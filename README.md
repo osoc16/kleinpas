@@ -1,2 +1,19 @@
-# klijnpas
-Cultuurconnect babysit project
+# Kleinpas
+This repository is the frontend part of the Cultuurconnect kleinpas project. It is a platform that reminds parents a week beforehand to search for a babysitter. This reminder can be received by mail, sms or a calender app (Outlook, iCal, Google Calender)
+
+## API
+The backend API for this project can be found via the [Kleinpas API](https://github.com/osoc16/kleinpas-api) repository
+
+## Install
+Clone the repository and open the index.html
+```
+git clone https://github.com/osoc16/kleinpas-api
+```
+
+## License
+See [LICENSE](LICENSE)
+
+## Contributions
+Best ways to contribute
+* Open [issues/tickets](../../issues)
+* Submit fixes and/or improvements with [Pull Requests](../../pulls)
