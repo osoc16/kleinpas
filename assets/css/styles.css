@@ -201,6 +201,12 @@ p {
     text-decoration: none;
 }
 
+.button-content .icon-check {
+    font-size: 2em;
+    font-weight: 600;
+    color: rgb(200, 200, 200);
+}
+
 .button-content {
     position: relative;
     top: 3em;

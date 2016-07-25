@@ -1,4 +1,4 @@
-var menudown = document.querySelector("#textme");
+/*var menudown = document.querySelector("#textme");
 var action = document.querySelector("#sms");
 var flick = 1;
 
@@ -16,7 +16,7 @@ function doSomething()
     flick = 1;
     }
     
-};
+};*/
 
 var menudown2 = document.querySelector("#mailme");
 var action2 = document.querySelector("#mail");
@@ -35,5 +35,4 @@ function doSomething2()
          menudown2.style.bottom = '205px'; 
     flick2 = 1;
     }
-    
 };
