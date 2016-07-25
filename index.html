@@ -13,6 +13,16 @@
 
     </head>
     <body>
+        <!-- messages start -->
+        <div id="darkness">
+            <div id="window">
+                <h2></h2>
+                <p></p>
+                <button id="ok">OK</button>
+            </div>
+        </div>
+        <!-- messages end -->
+
         <div class="logo"><img src="assets/img/logo_kleinpas.png" class="lol"></div>
         <img src="assets/img/illustration_header.svg" class="illustration-main">
         <div class="content-notify">
@@ -58,7 +68,9 @@
                             <i>h</i>
                             <select name="start-minute">
                                 <option value="00">00</option>
+                                <option value="15">15</option>
                                 <option value="30">30</option>
+                                <option value="45">45</option>
                             </select>
                             <i id="tot">tot</i>
                             <select name="end-hour">
@@ -90,7 +102,9 @@
                             <i>h</i>
                             <select name="end-minute">
                                 <option value="00">00</option>
+                                <option value="15">15</option>
                                 <option value="30">30</option>
+                                <option value="45">45</option>
                             </select>
                         </span>
                     </span>
@@ -137,7 +151,7 @@
                 </div>
             </div>
 
-            <button>Herinner mij!</button>
+            <button class="submit">Herinner mij!</button>
 
             <div class="promo">
                 <div class="promo-texts">
@@ -172,5 +186,6 @@
         </footer>
     </body>
     
+    <script src="assets/js/jquery-3.1.0.min.js"></script>
     <script src="assets/js/javascript.js"></script>
 </html>
