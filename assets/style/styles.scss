@@ -1,0 +1,135 @@
+$c_red: rgb(255, 96, 84);
+$c_blue: #113d70;
+$c_darkblue: #224d6c;
+
+* { box-sizing: border-box; }
+
+body {
+    font-family: 'Karla', Arial, sans-serif;
+    font-size: 14pt;
+    line-height: 150%;
+}
+
+header {
+    width: 100%;
+    height: 390px;
+
+    .header__logocontainer {
+        width: 130px;
+        margin: 20px auto;
+    }
+
+    .header__banner {
+        height: 350px;
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+        background-image: url('../illustration_header.svg');
+    }
+}
+
+main {
+    width: 960px;
+    min-height: 360px;
+    background: white;
+    margin: 0 auto;
+    border-radius: 10px 10px 0 0;
+    box-shadow: 0px 0px 63.05px 2px rgba(0, 0, 0, 0.06);
+    text-align: left;
+    padding-bottom: 100px;
+    overflow: auto;
+
+    .section__image,
+    .section__text {
+        float: left;
+        min-height: 260px;
+    }
+
+    .section__image {
+        width: 320px;
+        text-align: center;
+        padding-top: 30px;
+    }
+
+    .section__text {
+        width: 640px;
+    }
+
+    .section__text:nth-child(odd) {
+        text-align: right;
+    }
+
+    p {
+        color: $c_blue;
+        padding: 20px;
+        margin: 0 auto 20px;
+    }
+
+    h1 {
+        color: $c_red;
+        font-family: 'Montserrat', Arial;
+        font-size: 2.5rem;
+        padding: 40px 20px 20px;
+    }
+
+    .team {
+        margin-top: 30px;
+
+        h1, h2, h3 {
+            text-align: center;
+        }
+
+        h2 {
+            font-family: 'Montserrat', Arial;
+            font-size: 1.5rem;
+        }
+
+        .section__team {
+            height: 350px;
+            width: 840px;
+            margin: 0 60px 30px;
+            clear: both;
+            display: flex;
+            justify-content: center;
+
+            .section__person {
+                width: 280px;
+                float: left;
+
+                .person__links {
+                    display: flex;
+                    justify-content: center;
+
+                    a {
+                        display: block;
+                        float: left;
+                        padding: 5px 15px;
+                        text-align: center;
+                        margin: 10px 5px 0;
+                        background: $c_blue;
+                        color: white;
+                        text-decoration: none;
+                    }
+
+                    a:hover {
+                        text-decoration: underline;
+                    }
+                }
+
+                .person__picture {
+                    width: 200px;
+                    height: 200px;
+                    margin: 20px 40px;
+                    border: 5px solid $c_darkblue;
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+}
+
+footer {
+    width: 100%;
+    min-height: 250px;
+    background: $c_red;
+}
