@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-    
+
     <head lang="nl">
         <meta charset="utf-8" >
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,211 +13,189 @@
 
     </head>
     <body>
-        <!-- messages start -->
+
+        <div class="wrap">
+
+          <main>
+
+            <article class="conversion-box">
+                <div class="logo">
+                    <img src="assets/img/logo_kleinpas.png" class="lol">
+                </div>
+                <div class="form-box">
+                    <div class="content-notify">
+                        <h1 class="tagline">Een oppas nodig?<br>Stel een herinnering in.</h1>
+
+                        <div class="notification-when">
+                            <p class="vraag">Wanneer</p>
+
+                            <div class="date-time">
+                                <span class="time-field">
+                                    <i class="lines-icon icon-calendar dt-icon"></i>
+                                    <p>Dag:</p>
+                                    <input type="date" name="babysit-date" id="babysit-date"/>
+                                </span>
+                                <span class="time-field">
+                                    <i class="lines-icon icon-clock dt-icon"></i>
+                                    <p>Van:</p>
+                                    <span id="uur-field">
+                                        <select name="start-hour">
+                                            <option value="00">00</option>
+                                            <option value="01">01</option>
+                                            <option value="02">02</option>
+                                            <option value="03">03</option>
+                                            <option value="04">04</option>
+                                            <option value="05">05</option>
+                                            <option value="06">06</option>
+                                            <option value="07">07</option>
+                                            <option value="08">08</option>
+                                            <option value="09">09</option>
+                                            <option value="10">10</option>
+                                            <option value="11">11</option>
+                                            <option value="12">12</option>
+                                            <option value="13">13</option>
+                                            <option value="14">14</option>
+                                            <option value="15">15</option>
+                                            <option value="16">16</option>
+                                            <option value="17">17</option>
+                                            <option value="18">18</option>
+                                            <option value="19">19</option>
+                                            <option value="20">20</option>
+                                            <option value="21">21</option>
+                                            <option value="22">22</option>
+                                            <option value="23">23</option>
+                                        </select>
+                                        <i>h</i>
+                                        <select name="start-minute">
+                                            <option value="00">00</option>
+                                            <option value="15">15</option>
+                                            <option value="30">30</option>
+                                            <option value="45">45</option>
+                                        </select>
+                                        <i id="tot">tot</i>
+                                        <select name="end-hour">
+                                            <option value="00">00</option>
+                                            <option value="01">01</option>
+                                            <option value="02">02</option>
+                                            <option value="03">03</option>
+                                            <option value="04">04</option>
+                                            <option value="05">05</option>
+                                            <option value="06">06</option>
+                                            <option value="07">07</option>
+                                            <option value="08">08</option>
+                                            <option value="09">09</option>
+                                            <option value="10">10</option>
+                                            <option value="11">11</option>
+                                            <option value="12">12</option>
+                                            <option value="13">13</option>
+                                            <option value="14">14</option>
+                                            <option value="15">15</option>
+                                            <option value="16">16</option>
+                                            <option value="17">17</option>
+                                            <option value="18">18</option>
+                                            <option value="19">19</option>
+                                            <option value="20">20</option>
+                                            <option value="21">21</option>
+                                            <option value="22">22</option>
+                                            <option value="23">23</option>
+                                        </select>
+                                        <i>h</i>
+                                        <select name="end-minute">
+                                            <option value="00">00</option>
+                                            <option value="15">15</option>
+                                            <option value="30">30</option>
+                                            <option value="45">45</option>
+                                        </select>
+                                    </span>
+                                </span>
+                                <span class="time-field">
+                                    <i class="lines-icon icon-location dt-icon"></i>
+                                    <p>Locatie:</p>
+                                    <input type="date" name="babysit-date" id="babysit-date"/>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="notification-how">
+                            <p class="vraag">Waar</p>
+                            <div class="notify-buttons">
+                                <div class="button-n-field">
+                                    <div class="notify-button" id="sms">
+                                        <div class="button-content">
+                                            <i class="notify-icon lines-icon icon-speech"></i>
+                                            <p class="notify-button-text">sms</p>
+                                            <!-- <i class="lines-icon icon-check" id="sms-check"></i> -->
+                                        </div>
+                                    </div>
+                                    <div class="notify-field" id="textme">
+                                        <input type="text" name="phone" id="phone" placeholder="Typ je nummer"/>
+                                        <span class="white-line"></span>
+                                    </div>
+                                </div>
+                                <div class="button-n-field">
+                                    <div class="notify-button" id="mail">
+                                        <div class="button-content">
+                                            <i class="notify-icon lines-icon icon-envelope"></i>
+                                            <p class="notify-button-text">mail</p>
+                                            <!-- <i class="lines-icon icon-check" id="mail-check"></i> -->
+                                        </div>
+                                    </div>
+                                    <div class="notify-field" id="mailme">
+                                        <input type="email" name="email" id="email" placeholder="Jouw email"/>
+                                    </div>
+                                </div>
+                                <div class="button-n-field">
+                                    <div class="notify-button">
+                                        <div class="button-content">
+                                            <i class="notify-icon lines-icon icon-calendar"></i>
+                                            <p class="notify-button-text">kalender</p>
+                                            <!--<a href="#"><span class="button-link"></span></a>-->
+                                        </div>
+                                    </div>
+                                    <div class="notify-field" id="calreminder">
+                                        <p id="calfield"></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button class="submit">Herinner mij!</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="promo-box">
+                <!-- <div class="illustration-box"> -->
+                    <img src="assets/img/illustration.svg" class="illustration">
+                <!-- </div> -->
+                <p class="footer_text">Een project van open Summer of code 2016</p>
+            </article>
+
+          </main>
+
+        </div>
+
+
+        <!-- messages start
         <div id="darkness">
             <div id="window">
                 <h2></h2>
                 <p></p>
-                <a><button id="ok">OK</button></a>
+                <button id="ok">OK</button>
             </div>
         </div>
         <!-- messages end -->
+<!--
+        <div class="container">
+            <div class="conversion-side box">
 
-        <div class="logo"><img src="assets/img/logo_kleinpas.png" class="lol"></div>
-        <img src="assets/img/illustration_header.svg" class="illustration-main">
-        <div class="content-notify">
-            <h1>Heb jij een oppas nodig binnenkort?</h1>
-            <p class="vraag">Wanneer heb je een oppas nodig?</p>
-            
-                <div class="date-time">
-                    <span class="time-field">
-                        <i class="lines-icon icon-calendar dt-icon"></i>
-                        <p>Dag:</p>
-                        <input type="date" name="babysit-date" id="babysit-date"/>
-                    </span>
-                    <span class="time-field">
-                        <i class="lines-icon icon-clock dt-icon"></i>
-                        <p>Uur:</p>
-                        <span id="uur-field">
-                            <select name="start-hour">
-                                <option value="00">00</option>
-                                <option value="01">01</option>
-                                <option value="02">02</option>
-                                <option value="03">03</option>
-                                <option value="04">04</option>
-                                <option value="05">05</option>
-                                <option value="06">06</option>
-                                <option value="07">07</option>
-                                <option value="08">08</option>
-                                <option value="09">09</option>
-                                <option value="10">10</option>
-                                <option value="11">11</option>
-                                <option value="12">12</option>
-                                <option value="13">13</option>
-                                <option value="14">14</option>
-                                <option value="15">15</option>
-                                <option value="16">16</option>
-                                <option value="17">17</option>
-                                <option value="18">18</option>
-                                <option value="19">19</option>
-                                <option value="20">20</option>
-                                <option value="21">21</option>
-                                <option value="22">22</option>
-                                <option value="23">23</option>
-                            </select>
-                            <i>h</i>
-                            <select name="start-minute">
-                                <option value="00">00</option>
-                                <option value="15">15</option>
-                                <option value="30">30</option>
-                                <option value="45">45</option>
-                            </select>
-                            <i id="tot">tot</i>
-                            <select name="end-hour">
-                                <option value="00">00</option>
-                                <option value="01">01</option>
-                                <option value="02">02</option>
-                                <option value="03">03</option>
-                                <option value="04">04</option>
-                                <option value="05">05</option>
-                                <option value="06">06</option>
-                                <option value="07">07</option>
-                                <option value="08">08</option>
-                                <option value="09">09</option>
-                                <option value="10">10</option>
-                                <option value="11">11</option>
-                                <option value="12">12</option>
-                                <option value="13">13</option>
-                                <option value="14">14</option>
-                                <option value="15">15</option>
-                                <option value="16">16</option>
-                                <option value="17">17</option>
-                                <option value="18">18</option>
-                                <option value="19">19</option>
-                                <option value="20">20</option>
-                                <option value="21">21</option>
-                                <option value="22">22</option>
-                                <option value="23">23</option>
-                            </select>
-                            <i>h</i>
-                            <select name="end-minute">
-                                <option value="00">00</option>
-                                <option value="15">15</option>
-                                <option value="30">30</option>
-                                <option value="45">45</option>
-                            </select>
-                        </span>
-                    </span>
-                </div>
-
-            <p class="vraag">Kies hoe je verwittigd wil worden?</p>
-            <div class="notify-buttons">
-                <div class="button-n-field">
-                    <div class="notify-button" id="sms">
-                        <div class="button-content">
-                            <i class="notify-icon lines-icon icon-speech"></i>
-                            <p class="notify-button-text">Sms me</p>
-                            <i class="lines-icon icon-check" id="sms-check"></i>
-                        </div>
-                    </div>
-                    <div class="notify-field" id="textme">
-                        <input type="text" name="phone" id="phone" placeholder="Typ je nummer"/>
-                        <!-- <span class="white-line"></span> -->
-                    </div>
-                </div>
-                <div class="button-n-field">
-                    <div class="notify-button" id="mail">
-                        <div class="button-content">
-                            <i class="notify-icon lines-icon icon-envelope"></i>
-                            <p class="notify-button-text">Mail me</p>
-                            <i class="lines-icon icon-check" id="mail-check"></i>
-                        </div>
-                    </div>
-                    <div class="notify-field" id="mailme">
-                        <input type="email" name="email" id="email" placeholder="Jouw email"/>
-                    </div>
-                </div>
-                <div class="button-n-field google">
-                    <div class="notify-button">
-                        <div class="button-content">
-                            <i class="notify-icon lines-icon icon-calendar"></i>
-                            <p class="notify-button-text">Kalender</p>
-                            <!--<a href="#"><span class="button-link"></span></a>-->
-                        </div>
-                    </div>
-                    <div class="notify-field" id="calreminder">
-                        <p id="calfield">Download bestand</p>
-                    </div>
-                </div>
             </div>
-
-            <button class="submit">Herinner mij!</button>
-
-            <div id="dvData_google">
-                <table>
-                    <tr>
-                        <td>Subject</td>
-                        <td>Start Date</td>
-                        <td>Start Time</td>
-                        <td>End Date</td>
-                        <td>End Time</td>
-                        <td>All day event</td>
-                        <td>Description</td>
-                    </tr>
-                    <tr>
-                        <td>Zoek een babysit!</td>
-                        <td class="Start_Date"></td>
-                        <td class="Start_Time"></td>
-                        <td class="End_Date"></td>
-                        <td class="End_Time"></td>
-                        <td>false</td>
-                        <td>Binnen 1 week is het je cultuureel event, zorg dat je een babysitter vind!</td>
-                    </tr>
-                    <tr>
-                        <td>Cultuureel event!</td>
-                        <td class="Start_Date_Later"></td>
-                        <td class="Start_Time"></td>
-                        <td class="End_Date_Later"></td>
-                        <td class="End_Time"></td>
-                        <td>false</td>
-                        <td></td>
-                    </tr>
-                </table>
+            <div class="illustration-side box">
+                test
             </div>
-
-            <div class="promo">
-                <div class="promo-texts">
-                    <div class="promo-part">
-                        <p>
-                            Kleinpas helpt je enkele weken voor het event zoeken naar een geschikte babysit.
-                        </p>
-                    </div>
-                    <div class="promo-part">
-                        <p>
-                            Dankzij kleinpas worden culturele activiteiten toegankelijker voor jongeren.
-                        </p>
-                    </div>
-                    <div class="promo-part">
-                        <p>
-                            Jij vergeet dan niet meer een babysit vast te leggen en komt niet voor een verrassing te staan.
-                        </p>
-                    </div>
-                </div>
-                <div class="promo-pictures">
-                    <img src="assets/img/puppet3.png" class="puppet">
-                    <img src="assets/img/puppet2.png" class="puppet">
-                    <img src="assets/img/puppet1.png" class="puppet">
-                </div>
-            </div>
-        </div>
-        <span class="grey-background"></span>
-
-        <footer>
-            <img src= "assets/img/logo_kleinpas.png" class="footer_logo">
-            <p class="footer_text">Een project van open Summer of code 2016</p>          
-        </footer>
+        </div> -->
     </body>
-    
+
     <script src="assets/js/jquery-3.1.0.min.js"></script>
     <script src="assets/js/javascript.js"></script>
 </html>

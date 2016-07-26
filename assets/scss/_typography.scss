@@ -1,0 +1,31 @@
+/* typography */
+
+
+p {
+    font-family: 'Karla', sans-serif;
+    color: #113d70;
+}
+
+p.vraag {
+    color: #113d70;
+    font-weight: 200;
+    font-size: 1.3em;
+}
+
+#darkness #window h2 {
+    font-size: 2.4em;
+    font-family: 'Montserrat';
+    color: rgb(255, 96, 84);
+    font-weight: 600;
+    line-height: 1.2;
+    text-align: left;
+    padding: 3%;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#darkness #window p {
+    font-size: 1.3rem;
+    padding: 0 3%;
+}

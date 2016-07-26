@@ -1,0 +1,71 @@
+/* main */
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+html,
+body {
+	height: 100%;
+	line-height: 1.5;
+}
+
+.wrap {
+  height: 100vh;
+  display: flex;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  @media (max-width: 800px) {
+  	flex-direction: column;
+  }
+}
+
+article {
+	overflow-y: scroll;
+	flex: 2;
+	flex-direction: column;
+
+	&.conversion-box {
+		flex: 1;
+		display: flex;
+		flex-grow: 1;
+		flex-direction: column;
+	}
+}
+
+// .container {
+//     flex: 1;
+//     display: -webkit-flex;
+//     display: flex;
+//     overflow: auto;
+//     background-color: lightgrey;
+// }
+
+// .box {
+// 	min-height: min-content; /* needs vendor prefixes */
+//     display: flex;
+// }
+
+// .conversion-side {
+//     background-color: cornflowerblue;
+//     width: 50%;
+//     padding: 1rem;
+//     box-sizing: border-box;
+//     border-right: 1px solid red;
+//     overflow-y: scroll;
+// }
+
+// .illustration-side {
+//     background-color: cornflowerblue;
+//     width: 50%;
+//     box-sizing: border-box;
+//     background-color: $primary-red;
+//     display: inline-block;
+//     margin: 0;
+//     position: absolute;
+//     left: 50%;
+// }
