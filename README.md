@@ -6,8 +6,23 @@ The backend API for this project can be found via the [Kleinpas API](https://git
 
 ## Install
 Clone the repository and open the index.html
-```
+
+```shell
 git clone https://github.com/osoc16/kleinpas-api
+```
+
+Install [Node](https://nodejs.org) and [npm](https://npmjs.org)
+
+Install all dependencies:
+
+```shell
+npm install
+```
+
+Run the watch task to start watching for changes:
+
+```shell
+gulp watch
 ```
 
 ## License
