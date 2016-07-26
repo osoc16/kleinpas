@@ -18,7 +18,7 @@
             <div id="window">
                 <h2></h2>
                 <p></p>
-                <button id="ok">OK</button>
+                <a><button id="ok">OK</button></a>
             </div>
         </div>
         <!-- messages end -->
@@ -122,7 +122,7 @@
                     </div>
                     <div class="notify-field" id="textme">
                         <input type="text" name="phone" id="phone" placeholder="Typ je nummer"/>
-                        <span class="white-line"></span>
+                        <!-- <span class="white-line"></span> -->
                     </div>
                 </div>
                 <div class="button-n-field">
@@ -137,7 +137,7 @@
                         <input type="email" name="email" id="email" placeholder="Jouw email"/>
                     </div>
                 </div>
-                <div class="button-n-field">
+                <div class="button-n-field google">
                     <div class="notify-button">
                         <div class="button-content">
                             <i class="notify-icon lines-icon icon-calendar"></i>
@@ -146,12 +146,44 @@
                         </div>
                     </div>
                     <div class="notify-field" id="calreminder">
-                        <p id="calfield"></p>
+                        <p id="calfield">Download bestand</p>
                     </div>
                 </div>
             </div>
 
             <button class="submit">Herinner mij!</button>
+
+            <div id="dvData_google">
+                <table>
+                    <tr>
+                        <td>Subject</td>
+                        <td>Start Date</td>
+                        <td>Start Time</td>
+                        <td>End Date</td>
+                        <td>End Time</td>
+                        <td>All day event</td>
+                        <td>Description</td>
+                    </tr>
+                    <tr>
+                        <td>Zoek een babysit!</td>
+                        <td class="Start_Date"></td>
+                        <td class="Start_Time"></td>
+                        <td class="End_Date"></td>
+                        <td class="End_Time"></td>
+                        <td>false</td>
+                        <td>Binnen 1 week is het je cultuureel event, zorg dat je een babysitter vind!</td>
+                    </tr>
+                    <tr>
+                        <td>Cultuureel event!</td>
+                        <td class="Start_Date_Later"></td>
+                        <td class="Start_Time"></td>
+                        <td class="End_Date_Later"></td>
+                        <td class="End_Time"></td>
+                        <td>false</td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
 
             <div class="promo">
                 <div class="promo-texts">

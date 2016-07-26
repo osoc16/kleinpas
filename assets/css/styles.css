@@ -223,10 +223,6 @@ p {
     transition: 0.5s ease;
 }
 
-#textme {
-    bottom: 150px;
-}
-
 .white-line {
     width: 176px;
     position: absolute;
@@ -421,4 +417,17 @@ footer p {
 #darkness #window p {
     font-size: 1.3rem;
     padding: 0 3%;
+}
+
+#dvData_google {
+    display: none;
+}
+
+#calfield {
+    padding: 5px 30px;
+    width: 137px;
+    color: white;
+    position: absolute;
+    bottom: 15px;
+    font-family: 'Karla', Arial, sans-serif;
 }
