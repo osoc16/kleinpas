@@ -90,29 +90,27 @@ var email = document.querySelector('input[name=email]');
 var calender = "";
 
 // Click events
-var buttons = $(".button-n-field");
+var buttons = $(".notify-button");
 buttons.on("click", buttonFlick);
 function buttonFlick()
 {
-    if ($(this).hasClass('google'))
+    if ($(this).parent().hasClass('google'))
     {
         if (calender == '')
-        {
             calender = 'google';
-        }
         else
-        {
             calender = '';
-        }
+
         console.log(calender);
     }
-    if($(this).children('.notify-field').css('bottom') == '205px')
+
+    if ($(this).parent().children('.notify-field').css('bottom') == '205px')
     {
-        $(this).children('.notify-field').css('bottom', '150px'); 
+        $(this).parent().children('.notify-field').css('bottom', '150px'); 
     }
     else
     {
-        $(this).children('.notify-field').css('bottom', '205px');  
+        $(this).parent().children('.notify-field').css('bottom', '205px');  
     }
 };
 
