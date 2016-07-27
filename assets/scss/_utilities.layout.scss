@@ -3,17 +3,25 @@
  */
 
 .u-wrap {
-  height: 100%;
+    @media (min-width: $bp1) {
+        height: 100%;
+    }
 }
 
 .u-flex {
-    display: flex;
+    @media (min-width: $bp1) {
+        display: flex;
+    }
 }
 
 .u-flex-column {
-    flex-direction: column;
+    @media (min-width: $bp1) {
+        flex-direction: column;
+    }
 }
 
 .u-flex-1 {
-    flex: 1;
+    @media (min-width: $bp1) {
+        flex: 1;
+    }
 }
