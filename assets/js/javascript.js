@@ -87,33 +87,13 @@ var time_end_minutes = document.querySelector('select[name=end-minute]');
 var phone = document.querySelector('input[name=phone]');
 var email = document.querySelector('input[name=email]');
 var place = document.querySelector('input[name=place]');
-// This is temporary
 var calender = "";
 
-// Click events
-var buttons = $(".notify-button");
-buttons.on("click", buttonFlick);
-function buttonFlick()
-{
-    if ($(this).parent().hasClass('google'))
-    {
-        if (calender == '')
-            calender = 'google';
-        else
-            calender = '';
-
-        console.log(calender);
-    }
-
-    if ($(this).parent().children('.notify-field').css('bottom') == '205px')
-    {
-        $(this).parent().children('.notify-field').css('bottom', '150px');
-    }
-    else
-    {
-        $(this).parent().children('.notify-field').css('bottom', '205px');
-    }
-};
+// Calender click
+$(".calenderClick").on("click", function() {
+    if (calender == "") calender = "google";
+    else calender = "";
+});
 
 function sendData()
 {
@@ -131,7 +111,7 @@ function sendData()
 
         $.ajax({
             "crossDomain": true,
-            "url": "http://api.kleinpas.be",
+            "url": "http://api.kleinpas.be/add",
             "method": "POST",
             "headers": {
                 "content-type": "application/x-www-form-urlencoded"
