@@ -1,25 +1,4 @@
-/*var menudown = document.querySelector("#textme");
-var action = document.querySelector("#sms");
-var flick = 1;
-
-action.addEventListener("click",doSomething);
-
-function doSomething()
-{
-    if(flick == 1)
-    {
-        menudown.style.bottom = '150px';
-    flick = 0;
-    }
-    else{
-         menudown.style.bottom = '205px';
-    flick = 1;
-    }
-
-};*/
-
 function exportTableToCSV($table, filename) {
-
     var $rows = $table.find('tr:has(td)'),
 
         // Temporary delimiter characters unlikely to be typed by keyboard
@@ -51,13 +30,14 @@ function exportTableToCSV($table, filename) {
         // Data URI
         csvData = 'data:application/csv;charset=utf-8,' + encodeURIComponent(csv);
 
-    $(this)
-        .attr({
+    $("#ok").attr({
         'download': filename,
             'href': csvData,
             'target': '_blank'
     });
 
+    //window.location.assign(csvData);
+    //$(location).attr({'download': filename, 'href': csvData});
     location.reload();
 }
 
@@ -224,11 +204,11 @@ function checkForm()
                     // Click event export
                     $("#ok").parent().addClass("export");
                     $("#ok").parent().attr("href", "#");
-                    $("#ok").text("Downloaden");
+                    $("#ok").children().text("Downloaden");
 
                     $(".export").on('click', function (event) {
-                        $("#ok").text("OK");
-                        exportTableToCSV.apply(this, [$('#dvData_'+calender+'>table'), 'export.csv']);
+                        exportTableToCSV.apply(this, [$('#dvData_google>table'), 'kleinpas.csv']);//'+place.value+'
+                        $("#ok").children().text("OK");
                     });
                 }
 
