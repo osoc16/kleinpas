@@ -33,33 +33,28 @@
                             <h1 class="tagline">Een oppas nodig?<br>Stel een herinnering in.</h1>
                             <h2 class="subtitle">Waar &amp; wanneer</h2>
 
-                            <div class="date-time">
-                                <span class="time-field">
-                                    <label class="label" for="place">
-                                        <i class="lines-icon icon-location-pin dt-icon"></i>
-                                        <p>Locatie:</p>
+                            <div class="o-panel o-form--horizontal">
+                                <div class="o-form-group">
+                                    <label class="o-label o-label--horizontal" for="place">
+                                        <i class="lines-icon icon-location-pin o-label-icon"></i>
+                                        Locatie:
                                     </label>
-                                    <div class="input">
-                                        <input class="o-form-control" type="text" type="place" name="place" id="place" placeholder="Typ uw adres"/>
-                                    </div>
-                                </span>
-                                <span class="time-field">
-                                    <label class="label" for="babysit-date">
-                                        <i class="lines-icon icon-calendar dt-icon"></i>
-                                        <p>Dag:</p>
+                                    <input class="o-form-control" type="text" type="place" name="place" id="place" placeholder="Typ uw adres"/>
+                                </div>
+                                <div class="o-form-group">
+                                    <label class="o-label o-label--horizontal" for="babysit-date">
+                                        <i class="lines-icon icon-calendar o-label-icon"></i>
+                                        Dag:
                                     </label>
-                                    <div class="input">
-                                        <input class="o-form-control" type="date" name="babysit-date" id="babysit-date"/>
+                                    <input class="o-form-control" type="date" name="babysit-date" id="babysit-date"/>
+                                </div>
+                                <div class="o-form-group">
+                                    <div class="o-label o-label--horizontal">
+                                        <i class="lines-icon icon-clock o-label-icon"></i>
+                                        Uur:
                                     </div>
-                                </span>
-                                <span class="time-field">
-                                    <div class="label">
-                                        <i class="lines-icon icon-clock dt-icon"></i>
-                                        <p>Uur:</p>
-                                    </div>
-                                    <div class="input">
-                                    <span id="hour-field">
-                                        <label class="label-inbetween" for="start-hour">van</label>
+                                    <div class="o-form-controls-group" id="hour-field">
+                                        <label class="o-label-inbetween" for="start-hour">van</label>
                                         <select name="start-hour">
                                             <option value="00">00</option>
                                             <option value="01">01</option>
@@ -87,7 +82,7 @@
                                             <option value="23">23</option>
                                         </select>
                                         <span class="select-arrow"><i class="lines-icon icon-arrow-down"></i></span>
-                                        <span class="label-inbetween-small">:</span>
+                                        <span class="o-label-inbetween o-label-inbetween--small">:</span>
                                         <select name="start-minute">
                                             <option value="00">00</option>
                                             <option value="15">15</option>
@@ -95,8 +90,10 @@
                                             <option value="45">45</option>
                                         </select>
                                         <span class="select-arrow"><i class="lines-icon icon-arrow-down"></i></span>
-                                        <br>
-                                        <label class="label-inbetween" for="end-hour">tot</label>
+
+                                        <br />
+
+                                        <label class="o-label-inbetween" for="end-hour">tot</label>
                                         <select name="end-hour">
                                             <option value="00">00</option>
                                             <option value="01">01</option>
@@ -124,7 +121,7 @@
                                             <option value="23">23</option>
                                         </select>
                                         <span class="select-arrow"><i class="lines-icon icon-arrow-down"></i></span>
-                                        <span class="label-inbetween-small">:</span>
+                                        <span class="o-label-inbetween o-label-inbetween--small">:</span>
                                         <select name="end-minute">
                                             <option value="00">00</option>
                                             <option value="15">15</option>
@@ -132,45 +129,43 @@
                                             <option value="45">45</option>
                                         </select>
                                         <span class="select-arrow"><i class="lines-icon icon-arrow-down"></i></span>
-                                    </span>
-                                </span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
                         <h2 class="subtitle">Ontvang uw herinnering</h2>
-                        <div class="notification-medium">
-                            <ul>
-                                <li>
-                                    <input id="checkbox1" type="checkbox" id="sms">
-                                    <label for="checkbox1">
-                                        <i class="lines-icon icon-plus"></i>
-                                        <i class="lines-icon icon-check"></i>
-                                        Per SMS
-                                    </label>
-                                    <div class="notify-field" id="textme">
-                                        <input class="o-form-control" type="tel" name="phone" id="phone" placeholder="Typ uw telefoonnummer"/>
-                                    </div>
-                                </li>
-                                <li>
-                                    <input id="checkbox2" type="checkbox">
-                                    <label for="checkbox2">
-                                        <i class="lines-icon icon-plus"></i>
-                                        <i class="lines-icon icon-check"></i>
-                                        Per e-mail
-                                    </label>
-                                    <div class="notify-field" id="mailme">
-                                        <input class="o-form-control" type="email" name="email" id="email" placeholder="Typ uw e-mailadres"/>
-                                    </div>
-                                </li>
-                                <li>
-                                    <input id="checkbox3" type="checkbox">
-                                    <label for="checkbox3" class="calenderClick">
-                                        <i class="lines-icon icon-plus"></i>
-                                        <i class="lines-icon icon-check"></i>
-                                        Via uw kalender
-                                    </label>
-                                </li>
-                            </ul>
+                        <div class="o-panel notification-medium">
+                            <div class="o-form-group">
+                                <input id="checkbox1" type="checkbox" id="sms">
+                                <label for="checkbox1">
+                                    <i class="lines-icon icon-plus"></i>
+                                    <i class="lines-icon icon-check"></i>
+                                    Per SMS
+                                </label>
+                                <div class="notify-field" id="textme">
+                                    <input class="o-form-control" type="tel" name="phone" id="phone" placeholder="Typ uw telefoonnummer"/>
+                                </div>
+                            </div>
+                            <div class="o-form-group">
+                                <input id="checkbox2" type="checkbox">
+                                <label for="checkbox2">
+                                    <i class="lines-icon icon-plus"></i>
+                                    <i class="lines-icon icon-check"></i>
+                                    Per e-mail
+                                </label>
+                                <div class="notify-field" id="mailme">
+                                    <input class="o-form-control" type="email" name="email" id="email" placeholder="Typ uw e-mailadres"/>
+                                </div>
+                            </div>
+                            <div class="o-form-group">
+                                <input id="checkbox3" type="checkbox">
+                                <label for="checkbox3" class="calenderClick">
+                                    <i class="lines-icon icon-plus"></i>
+                                    <i class="lines-icon icon-check"></i>
+                                    Via uw kalender
+                                </label>
+                            </div>
                         </div>
 
 

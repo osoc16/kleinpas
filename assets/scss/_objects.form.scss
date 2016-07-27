@@ -2,58 +2,10 @@
  * Form box
  */
 
-.form-box {
-    padding: 1em 1.5em;
-    @media (min-width: $bp2) {
-        padding: 2em 2.5em;
-    }
-    overflow: scroll;
-    box-shadow: inset -1px 0 0 0 rgba($gray, .5),
-                inset -3px 0 7px 0 rgba($gray, .1);
-}
-
-.date-time {
-    border-radius: $radius;
-    background-color: $gray-light;
-    border-bottom: 2px solid $primary-red;
-    margin-bottom: 1.5em;
-    padding: .9em 1.2em 0;
-}
-
-.dt-icon {
-    margin-right: .5em;
-    font-size: 1.2em;
-    position: relative;
-    top: .2em;
-    color: $primary-red;
-}
-
-.date-time * {
-    display: inline-block;
-}
-
-.label-inbetween {
-    width: 2em;
-    color: $primary-blue-dark;
-    opacity: .5;
-}
-
-.label-inbetween-small {
-    width: .5em;
-    color: $primary-blue-dark;
-    opacity: .5;
-}
-
-.time-field {
-    font-size: 1.1em;
-    letter-spacing: 1px;
-    margin-bottom: 1em;
+.o-form-group {
     display: block;
-
-    .label {
-        width: 8em;
-        vertical-align: top;
-    }
+    margin: 1em 0;
+    font-size: 1.1em;
 }
 
 .o-form-control {
@@ -61,12 +13,68 @@
     box-shadow: 0 1px $primary-blue-dark;
     font-size: 1em;
     color: $primary-blue-dark;
-    padding: .3em .5em;
+    padding: .3em .1em;
     background-color: transparent;
     appearance: none;
+    display: block;
 
     &:focus {
         box-shadow: 0 2px $primary-blue-dark;
+        outline: none;
+        background-color: #fff;
+    }
+}
+
+.o-form-controls-group {
+
+}
+
+.o-label {
+    vertical-align: top;
+    color: $primary-blue-dark;
+}
+
+.o-label-inbetween {
+    display: inline-block;
+    width: 2em;
+    color: $primary-blue-dark;
+    opacity: .5;
+}
+
+.o-label-inbetween--small {
+    width: .5em;
+}
+
+.o-label-icon {
+    margin-right: .5em;
+    font-size: 1.2em;
+    position: relative;
+    top: .2em;
+    color: $primary-red;
+}
+
+.o-label--horizontal {
+    width: 7em;
+}
+
+// horizontal form
+
+.o-form--horizontal {
+    .o-label,
+    .o-form-control,
+    .o-form-controls-group {
+        display: inline-block;
+    }
+}
+
+// The following still needs to be sorted
+
+.form-box {
+    padding: 1em 1.5em;
+    @media (min-width: $bp2) {
+        padding: 2em 2.5em;
+        box-shadow: inset -1px 0 0 0 rgba($gray, .5),
+                    inset -3px 0 7px 0 rgba($gray, .1);
     }
 }
 
@@ -81,39 +89,12 @@ select + .select-arrow {
     }
 }
 
-.time-field input:focus {
-    outline: none;
-    background-color: #fff;
-}
-
 #tot {
     margin-left: .5em;
     margin-right: .5em;
 }
 
-.button-n-field {
-    flex: 1;
-    max-height: 270px;
-
-    &:first-child {
-        padding-right: 1em;
-    }
-
-    &:last-child {
-        padding-left: 1em;
-    }
-}
-
-#textme {
-    bottom: 150px;
-}
-
 .notification-medium {
-    background-color: $gray-light;
-    border-radius: $radius;
-    border-bottom: 2px solid $primary-red;
-    margin-bottom: 1.5em;
-    padding: .9em 1.2em .3em;
     color: $primary-blue-dark;
 }
 

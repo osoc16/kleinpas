@@ -1,0 +1,14 @@
+/**
+ * Panel
+ */
+
+.o-panel {
+    margin: 1em 0 2em;
+    border-bottom: 2px solid $primary-red;
+
+    @media (min-width: $bp2) {
+        border-radius: $radius;
+        background-color: $gray-light;
+        padding: .5em 1.2em;
+    }
+}
