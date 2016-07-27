@@ -195,6 +195,7 @@ footer {
         }
 
         h1 {
+            padding: 40px 0 20px;
             line-height: 130%;
         }
 
@@ -251,6 +252,10 @@ footer {
         .links {
             display: block;
             text-align: center;
+
+            a {
+                margin-top: 10px;
+            }
         }
     }
 }

@@ -132,6 +132,7 @@ footer {
     main section:nth-child(even) .section__image {
       display: none; }
     main h1 {
+      padding: 40px 0 20px;
       line-height: 130%; }
     main .team {
       margin-top: 30px; }
@@ -166,6 +167,8 @@ footer {
 
   footer .links {
     display: block;
-    text-align: center; } }
+    text-align: center; }
+    footer .links a {
+      margin-top: 10px; } }
 
 /*# sourceMappingURL=styles.css.map */
