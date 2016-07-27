@@ -24,7 +24,7 @@ header {
         width: 100%;
         background-size: cover;
         background-position: center;
-        background-image: url('../illustration_header.svg');
+        background-image: url('../images/illustration_header.svg');
     }
 }
 
@@ -61,15 +61,18 @@ main {
 
     p {
         color: $c_blue;
-        padding: 20px;
+        padding: 20px 40px;
         margin: 0 auto 20px;
+        text-align: justify;
     }
 
     h1 {
         color: $c_red;
         font-family: 'Montserrat', Arial;
         font-size: 2.5rem;
-        padding: 40px 20px 20px;
+        padding: 40px 40px 20px;
+        text-align: center;
+        text-align: justify;
     }
 
     .team {
@@ -82,6 +85,7 @@ main {
         h2 {
             font-family: 'Montserrat', Arial;
             font-size: 1.5rem;
+            color: $c_red;
         }
 
         .section__team {

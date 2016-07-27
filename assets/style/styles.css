@@ -17,7 +17,7 @@ header {
     width: 100%;
     background-size: cover;
     background-position: center;
-    background-image: url("../illustration_header.svg"); }
+    background-image: url("../images/illustration_header.svg"); }
 
 main {
   width: 960px;
@@ -43,20 +43,24 @@ main {
     text-align: right; }
   main p {
     color: #113d70;
-    padding: 20px;
-    margin: 0 auto 20px; }
+    padding: 20px 40px;
+    margin: 0 auto 20px;
+    text-align: justify; }
   main h1 {
     color: #ff6054;
     font-family: 'Montserrat', Arial;
     font-size: 2.5rem;
-    padding: 40px 20px 20px; }
+    padding: 40px 40px 20px;
+    text-align: center;
+    text-align: justify; }
   main .team {
     margin-top: 30px; }
     main .team h1, main .team h2, main .team h3 {
       text-align: center; }
     main .team h2 {
       font-family: 'Montserrat', Arial;
-      font-size: 1.5rem; }
+      font-size: 1.5rem;
+      color: #ff6054; }
     main .team .section__team {
       height: 350px;
       width: 840px;
