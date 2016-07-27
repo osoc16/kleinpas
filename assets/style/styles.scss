@@ -144,6 +144,33 @@ footer {
     width: 100%;
     min-height: 250px;
     background: $c_red;
+
+    h1 {
+        text-align: center;
+        padding: 40px 20px 20px;
+        width: 100%;
+        font-size: 2rem;
+    }
+
+    .links {
+        display: flex;
+        justify-content: center;
+
+        a {
+            display: block;
+            padding: 0 20px;
+            text-decoration: none;
+            color: black;
+
+            i {
+                padding-right: 10px;
+            }
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    }
 }
 
 @media(max-width: 960px) {
