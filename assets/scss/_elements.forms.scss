@@ -16,10 +16,11 @@ button {
     padding: 0 1em;
     font-weight: normal;
     letter-spacing: .5px;
+    transition: background .05s cubic-bezier(.62,.28,.23,.99);
 
     &:hover,
     &:focus {
-        background: $primary-blue-dark;
+        background: mix(#fff, $primary-blue-dark, 10%);
     }
 }
 
@@ -33,6 +34,7 @@ button {
          display: block;
          position: relative;
          font-size: 1.1em;
+         transition: color .05s cubic-bezier(.62,.28,.23,.99);
 
          &:hover {
              color: $primary-red;
