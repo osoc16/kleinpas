@@ -79,27 +79,14 @@
     appearance: none;
 }
 
-select {
-    background: none;
-    border: none;
-    box-shadow: none;
-    font-size: 1em;
-    color: $primary-blue-dark;
-    border-bottom: 1px solid $primary-blue-dark;
-    border-radius: 0;
-    -webkit-appearance: none;
-    -webkit-border-radius: 0px;
-    padding-right: 1.5em;
+select + .select-arrow {
+    position: relative;
+    left: -1.3em;
+    width: 0px;
 
-    + .select-arrow {
-        position: relative;
-        left: -1.3em;
-        width: 0px;
-
-        i.icon-arrow-down {
-            font-size: 80%;
-            pointer-events: none;
-        }
+    i.icon-arrow-down {
+        font-size: 80%;
+        pointer-events: none;
     }
 }
 
@@ -143,8 +130,6 @@ select {
 }
 
 .white-line {
-    // width: 176px;
-    // position: absolute;
     bottom: 20px;
     left: 10px;
     height: 2px;
@@ -160,79 +145,38 @@ select {
     color: $primary-blue-dark;
 }
 
-/* input */
-
-input::-webkit-input-placeholder {
-   color: rgba($primary-blue-dark, 0.4);
-}
-
-input:-moz-placeholder { /* Firefox 18- */
-   color: rgba($primary-blue-dark, 0.4);
-}
-
-input::-moz-placeholder {  /* Firefox 19+ */
-   color: rgba($primary-blue-dark, 0.4);
-}
-
-input:-ms-input-placeholder {
-   color: rgba($primary-blue-dark, 0.4);
-}
-
 /* checkboxes */
 
-input[type="checkbox"] {
-    display: none;
-    cursor: pointer;
-
-    + label {
-        margin: 0 1em 0.4em 0;
-        display: block;
+input[type="checkbox"] + label {
+    .icon-plus,
+    .icon-check {
+        display: inline-block;
+        font-size: 120%;
+        margin-right: 0.4em;
         position: relative;
-        font-size: 1.1em;
-
-        &:hover {
-            color: $primary-red;
-
-            &:before {
-                color: $primary-blue-dark;
-            }
-        }
-
-        .icon-plus,
-        .icon-check {
-            display: inline-block;
-            font-size: 120%;
-            margin-right: 0.4em;
-            position: relative;
-            top: 0.15em;
-        }
-
-        .icon-check {
-            display: none;
-        }
+        top: 0.15em;
     }
 
-    + label + .notify-field {
+    .icon-check {
+        display: none;
+    }
+
+    + .notify-field {
         display: none;
     }
 }
 
-input[type="checkbox"]:checked {
+input[type="checkbox"]:checked + label {
+    .icon-plus {
+        display: none;
+    }
 
-    + label {
-        color: $primary-red;
+    .icon-check {
+        display: inline-block;
+    }
 
-        .icon-plus {
-            display: none;
-        }
-
-        .icon-check {
-            display: inline-block;
-        }
-
-        + .notify-field {
-            display: block;
-        }
+    + .notify-field {
+        display: block;
     }
 }
 
