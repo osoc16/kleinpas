@@ -4,5 +4,6 @@
 
 $primary-red        : #ff6054;
 $primary-blue-dark  : #113d70;
+$gray               : mix($primary-blue-dark, #eee, 3%);;
 $gray-light         : #f4f4f4;
-$light-transparent  : rgba(251, 251, 251, 0.5);
+$light-transparent  : rgba($gray-light, 0.5);
