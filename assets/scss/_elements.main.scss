@@ -26,16 +26,4 @@ article {
 	overflow-y: scroll;
 	flex: 2;
 	flex-direction: column;
-
-	&.conversion-box {
-		flex: 1;
-		display: flex;
-		flex-grow: 1;
-		flex-direction: column;
-	}
-}
-
-.wrap {
-  height: 100vh;
-  display: flex;
 }

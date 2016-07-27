@@ -1,0 +1,19 @@
+/**
+ * Utilities layout classes
+ */
+
+.u-wrap {
+  height: 100%;
+}
+
+.u-flex {
+    display: flex;
+}
+
+.u-flex-column {
+    flex-direction: column;
+}
+
+.u-flex-1 {
+    flex: 1;
+}
