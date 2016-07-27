@@ -8,14 +8,14 @@ function doSomething()
 {
     if(flick == 1)
     {
-        menudown.style.bottom = '150px'; 
+        menudown.style.bottom = '150px';
     flick = 0;
     }
     else{
-         menudown.style.bottom = '205px'; 
+         menudown.style.bottom = '205px';
     flick = 1;
     }
-    
+
 };*/
 
 function exportTableToCSV($table, filename) {
@@ -57,7 +57,7 @@ function exportTableToCSV($table, filename) {
             'href': csvData,
             'target': '_blank'
     });
-    
+
     location.reload();
 }
 
@@ -86,6 +86,7 @@ var time_end_hour = document.querySelector('select[name=end-hour]');
 var time_end_minutes = document.querySelector('select[name=end-minute]');
 var phone = document.querySelector('input[name=phone]');
 var email = document.querySelector('input[name=email]');
+var place = document.querySelector('input[name=place]');
 // This is temporary
 var calender = "";
 
@@ -106,11 +107,11 @@ function buttonFlick()
 
     if ($(this).parent().children('.notify-field').css('bottom') == '205px')
     {
-        $(this).parent().children('.notify-field').css('bottom', '150px'); 
+        $(this).parent().children('.notify-field').css('bottom', '150px');
     }
     else
     {
-        $(this).parent().children('.notify-field').css('bottom', '205px');  
+        $(this).parent().children('.notify-field').css('bottom', '205px');
     }
 };
 
@@ -123,13 +124,14 @@ function sendData()
             "email": email.value,
             "phonenumber": phone.value,
             "date": date.value,
+            "place": place.value,
             "start": time_start_hour.value + ":" + time_start_minutes.value + ":00",
             "end": time_end_hour.value + ":" + time_end_minutes.value + ":00"
         };
 
         $.ajax({
             "crossDomain": true,
-            "url": "http://localhost:80/add",
+            "url": "http://api.kleinpas.be",
             "method": "POST",
             "headers": {
                 "content-type": "application/x-www-form-urlencoded"
@@ -220,7 +222,7 @@ function checkForm()
                     $(".End_Time").html(time_end_hour.value + ":" + time_end_minutes.value);
 
                     // Reduce a week
-                    var today = new Date(date.value); 
+                    var today = new Date(date.value);
                     var lastWeekDate = new Date(today.setDate(today.getDate() - 7));
                     var formattedDate = formatDate(lastWeekDate);
 
