@@ -15,11 +15,11 @@
     </head>
     <body>
         <!-- messages start -->
-        <div id="darkness">
-            <div id="window">
+        <div id="darkness" class="o-modal">
+            <div id="window" class="o-modal__window">
                 <h2></h2>
                 <p></p>
-                <a><button id="ok">OK</button></a>
+                <button id="ok">OK</button>
             </div>
         </div>
         <!-- messages end -->
@@ -177,7 +177,7 @@
                             </div>
                         </div> -->
 
-                        <h2 class="subtitle">Ontvang je herinnering</h2>
+                        <h2 class="subtitle">Ontvang uw herinnering</h2>
                         <div class="notification-medium">
                             <ul>
                                 <li>
@@ -185,11 +185,10 @@
                                     <label for="checkbox1">
                                         <i class="lines-icon icon-plus"></i>
                                         <i class="lines-icon icon-check"></i>
-                                        Via sms
+                                        Per SMS
                                     </label>
                                     <div class="notify-field" id="textme">
-                                        <input type="tel" name="phone" id="phone" placeholder="Typ je nummer"/>
-                                        <span class="white-line"></span>
+                                        <input type="tel" name="phone" id="phone" placeholder="Typ uw telefoonnummer"/>
                                     </div>
                                 </li>
                                 <li>
@@ -197,10 +196,10 @@
                                     <label for="checkbox2">
                                         <i class="lines-icon icon-plus"></i>
                                         <i class="lines-icon icon-check"></i>
-                                        Via email
+                                        Per e-mail
                                     </label>
                                     <div class="notify-field" id="mailme">
-                                        <input type="email" name="email" id="email" placeholder="Jouw email"/>
+                                        <input type="email" name="email" id="email" placeholder="Typ uw e-mailadres"/>
                                     </div>
                                 </li>
                                 <li>
@@ -208,7 +207,7 @@
                                     <label for="checkbox3">
                                         <i class="lines-icon icon-plus"></i>
                                         <i class="lines-icon icon-check"></i>
-                                        Via mijn kalender
+                                        Via uw kalender
                                     </label>
                                     <div class="notify-field" id="calreminder">
                                         <p id="calfield">Download bestand</p>

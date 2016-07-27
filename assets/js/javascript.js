@@ -168,7 +168,7 @@ function checkForm()
             if (isNaN(phonenumber))
             {
                 console.log('%cERROR: phonenumber isnt a number!', 'color: red');
-                showMessage('Oops!', 'Dat is geen geldig telefoonnummer!');
+                showMessage('Sorry', 'Dat is geen geldig telefoonnummer!');
                 return false;
             }
             else
@@ -182,7 +182,7 @@ function checkForm()
             if (email.value.indexOf('@') < 1)
             {
                 console.log('%cERROR: email isnt an email!', 'color: red');
-                showMessage('Oops!', 'Dat is geen geldige email!');
+                showMessage('Sorry', 'Dat is geen geldige email!');
                 return false;
             }
             else
@@ -259,21 +259,21 @@ function checkForm()
             else
             {
                 console.log('%cERROR: that day has already passed!', 'color: red;');
-                showMessage('Oops!', 'Die dag is al gepasseerd!');
+                showMessage('Sorry', 'Die dag is al gepasseerd!');
                 return false;
             }
 
         }
         else
         {
-            showMessage('Oops!', 'Kies een datum!');
+            showMessage('Sorry', 'Kies een datum!');
             console.log('%cERROR: pick a date! ', 'color: red');
             return false;
         }
     }
     else
     {
-        showMessage('Oops!', 'Noteer een telefoonnummer, email of selecteer de kalender!');
+        showMessage('Sorry', 'Noteer een telefoonnummer, e-mailadres of selecteer de kalender!');
         console.log('%cERROR: insert either calender, phone or email!', 'color: red');
         return false;
     }

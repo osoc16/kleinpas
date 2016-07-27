@@ -6,17 +6,21 @@
 
 button {
     border-radius: $radius;
-    border: none;
-    background-color: $primary-blue-dark;
+    border: 0;
+    background: $primary-blue-dark;
     margin: 0 auto;
     color: white;
     height: 51px;
     text-decoration: none;
     font-size: 1.4em;
-    cursor: pointer;
     padding: 0 1em;
     font-weight: normal;
     letter-spacing: .5px;
+
+    &:hover,
+    &:focus {
+        background: $primary-blue-dark;
+    }
 }
 
 // Checkboxes
@@ -49,7 +53,7 @@ input[type="checkbox"]:checked + label {
 
 select {
     background: none;
-    border: none;
+    border: 0;
     box-shadow: none;
     font-size: 1em;
     color: $primary-blue-dark;
