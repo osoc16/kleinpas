@@ -1,0 +1,52 @@
+/* error */
+
+#darkness {
+    top: 0; bottom: 0;
+    left: 0; right: 0;
+    position: fixed;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.8);
+    display: none;
+}
+
+#darkness #window {
+    border-radius: 10px;
+    background-color: $gray;
+    margin: 100px auto;
+    width: 300px;
+    min-width: 35em;
+    border-bottom: 2px solid rgb(255, 96, 84);
+    margin-top: em;
+    margin-bottom: 2.5em;
+}
+
+#darkness #window h2 {
+    font-size: 2.4em;
+    color: rgb(255, 96, 84);
+    font-weight: 600;
+    line-height: 1.2;
+    text-align: left;
+    padding: 3%;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#darkness #window p {
+    font-size: 1.3em;
+    padding: 0 3%;
+}
+
+#darkness #window button {
+    position: relative;
+    margin: 0 auto;
+    color: white;
+    height: 51px;
+    text-decoration: none;
+    font-size: 1.4em;
+    font-weight: 500;
+    margin-top: 2em;
+    margin: 2em 194px 1em;
+    cursor: pointer;
+}
+

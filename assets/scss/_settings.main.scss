@@ -9,6 +9,7 @@ html,
 body {
 	height: 100%;
 	line-height: 1.5;
+    font-family: $karla;
 }
 
 .wrap {
@@ -53,7 +54,7 @@ article {
 // .conversion-side {
 //     background-color: cornflowerblue;
 //     width: 50%;
-//     padding: 1rem;
+//     padding: 1em;
 //     box-sizing: border-box;
 //     border-right: 1px solid red;
 //     overflow-y: scroll;

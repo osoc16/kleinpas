@@ -1,17 +1,31 @@
 /* promo */
 
+img.logo {
+    width: 90px;
+}
+
+h1.tagline {
+    font-family: $montserrat;
+    font-size: 2em;
+    margin-bottom: 0.4em;
+    color: $primary-red;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
 .promo-box {
     text-align: center;
     background-color: rgb(244, 244, 244);
-    padding: 1rem 0;
+    padding: 2em;
     flex-grow: 1;
     display: flex;
   	flex-direction: column;
   	overflow: hidden;
+    box-sizing: border-box;
 
     p {
         font-weight: 600;
-        margin: 1em;
+        margin: 0.5em;
     }
 }
 
@@ -26,33 +40,4 @@
         position: inherit;
         width: 100%;
     }
-}
-
-.promo-texts {
-    background-color: $primary-red;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    margin: 0;
-    padding: 0 1rem 1rem 0;
-    box-sizing: border-box;
-    flex-shrink: 1;
-    flex: 1;
-
-    p {
-        color: white;
-    }
-}
-
-.promo-part {
-    width: 33%;
-    flex-grow: 0;
-    flex-shrink: 0;
-    position: relative;
-}
-
-.promo-part p {
-    font-size: 1.1em;
-    line-height: 1.4em;
-    padding: 1em;
 }

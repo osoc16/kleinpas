@@ -20,4 +20,25 @@ div.content-notify {
     left: 0;
     right: 0;
 }
+
+.button-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: 2;
+    background: url('../img/empty.gif');
+}
+
+.button-content .icon-check {
+    font-size: 2em;
+    font-weight: 600;
+    color: rgb(200, 200, 200);
+}
+
+.button-content {
+    position: relative;
+    top: 3em;
+}
+
 */
