@@ -162,6 +162,10 @@ footer {
               text-decoration: underline; }
           main .team .section__team .section__person .person__picture {
             width: 60%;
-            height: 60%; } }
+            height: 60%; }
+
+  footer .links {
+    display: block;
+    text-align: center; } }
 
 /*# sourceMappingURL=styles.css.map */
