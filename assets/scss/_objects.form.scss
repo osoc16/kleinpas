@@ -7,8 +7,8 @@
     flex: 1;
     display: flex;
     overflow: scroll;
-    box-shadow: inset -1px 0 0 0 rgba($gray, 0.5),
-                inset -3px 0 7px 0 rgba($gray, 0.1);
+    box-shadow: inset -1px 0 0 0 rgba($gray, .5),
+                inset -3px 0 7px 0 rgba($gray, .1);
 }
 
 .date-time {
@@ -16,14 +16,14 @@
     background-color: $gray-light;
     border-bottom: 2px solid $primary-red;
     margin-bottom: 1.5em;
-    padding: 0.9em 1.2em 0;
+    padding: .9em 1.2em 0;
 }
 
 .dt-icon {
-    margin-right: 0.5em;
+    margin-right: .5em;
     font-size: 1.2em;
     position: relative;
-    top: 0.2em;
+    top: .2em;
     color: $primary-red;
 }
 
@@ -34,13 +34,13 @@
 .label-inbetween {
     width: 2em;
     color: $primary-blue-dark;
-    opacity: 0.5;
+    opacity: .5;
 }
 
 .label-inbetween-small {
-    width: 0.5em;
+    width: .5em;
     color: $primary-blue-dark;
-    opacity: 0.5;
+    opacity: .5;
 }
 
 .time-field {
@@ -55,20 +55,18 @@
     }
 }
 
-.time-field input,
-.hour-field select {
-    background: none;
+.o-form-control {
     border: 0;
-    border-bottom: 1px solid $primary-blue-dark;
-    box-shadow: none;
+    box-shadow: 0 1px $primary-blue-dark;
     font-size: 1em;
     color: $primary-blue-dark;
-    padding: 0.3em 0.5em;
+    padding: .3em .5em;
     background-color: transparent;
-    background-image: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
     appearance: none;
+
+    &:focus {
+        box-shadow: 0 2px $primary-blue-dark;
+    }
 }
 
 select + .select-arrow {
@@ -126,7 +124,7 @@ select + .select-arrow {
     border-radius: $radius;
     border-bottom: 2px solid $primary-red;
     margin-bottom: 1.5em;
-    padding: 0.9em 1.2em 0.3em;
+    padding: .9em 1.2em .3em;
     color: $primary-blue-dark;
 }
 
@@ -137,9 +135,9 @@ input[type="checkbox"] + label {
     .icon-check {
         display: inline-block;
         font-size: 120%;
-        margin-right: 0.4em;
+        margin-right: .4em;
         position: relative;
-        top: 0.15em;
+        top: .15em;
     }
 
     .icon-check {
