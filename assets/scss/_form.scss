@@ -11,12 +11,12 @@
     flex: 1;
     display: flex;
     overflow: scroll;
-    box-shadow: inset -3px 0px 3px 0px rgba($gray, 0.5);
+    box-shadow: inset -3px 0px 3px 0px rgba($gray-light, 0.5);
 }
 
 .date-time {
-    border-radius: 10px;
-    background-color: $gray;
+    border-radius: $radius;
+    background-color: $gray-light;
     border-bottom: 2px solid $primary-red;
     margin-bottom: 1.5em;
     padding: 0.9em 1.2em 0;
@@ -27,7 +27,7 @@
     font-size: 1.2em;
     position: relative;
     top: 0.2em;
-    color: rgb(255, 96, 84);
+    color: $primary-red;
 }
 
 .date-time * {
@@ -137,8 +137,8 @@ select + .select-arrow {
 }
 
 .notification-medium {
-    background-color: $gray;
-    border-radius: 10px;
+    background-color: $gray-light;
+    border-radius: $radius;
     border-bottom: 2px solid $primary-red;
     margin-bottom: 1.5em;
     padding: 0.9em 1.2em 0.3em;
@@ -219,9 +219,9 @@ input[type="checkbox"]:checked + label {
 }
 
 .notify-button {
-    border-radius: 10px;
-    background-color: $gray;
-    border-bottom: 2px solid rgb(255, 96, 84);
+    border-radius: $radius;
+    background-color: $gray-light;
+    border-bottom: 2px solid $primary-red;
     text-align: center;
     z-index: 1;
     cursor: pointer;
@@ -244,8 +244,8 @@ input[type="checkbox"]:checked + label {
 }
 
 .notify-field {
-    border-radius: 10px;
-    background-color: rgb(255, 96, 84);
+    border-radius: $radius;
+    background-color: $primary-red;
     width: 100%;
     padding-top: 1.5em;
     top: -1.5em;
