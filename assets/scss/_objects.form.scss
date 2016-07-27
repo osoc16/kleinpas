@@ -4,7 +4,7 @@
 
 .form-box {
     padding: 1em 1.5em;
-    @media (min-width: $bp1) {
+    @media (min-width: $bp2) {
         padding: 2em 2.5em;
     }
     overflow: scroll;
@@ -91,18 +91,6 @@ select + .select-arrow {
     margin-right: .5em;
 }
 
-#dvData_google {
-    display: none;
-}
-
-#calfield {
-    padding: 5px 30px;
-    width: 137px;
-    color: #fff;
-    position: absolute;
-    bottom: 15px;
-}
-
 .button-n-field {
     flex: 1;
     max-height: 270px;
@@ -162,4 +150,11 @@ input[type="checkbox"]:checked + label {
     + .notify-field {
         display: block;
     }
+}
+
+// hide stuff for JS
+
+#dvData_google,
+#calfield {
+    display: none;
 }

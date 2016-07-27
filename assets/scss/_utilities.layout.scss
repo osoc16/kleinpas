@@ -3,25 +3,25 @@
  */
 
 .u-wrap {
-    @media (min-width: $bp1) {
+    @media (min-width: $bp2) {
         height: 100%;
     }
 }
 
 .u-flex {
-    @media (min-width: $bp1) {
+    @media (min-width: $bp2) {
         display: flex;
     }
 }
 
 .u-flex-column {
-    @media (min-width: $bp1) {
+    @media (min-width: $bp2) {
         flex-direction: column;
     }
 }
 
 .u-flex-1 {
-    @media (min-width: $bp1) {
+    @media (min-width: $bp2) {
         flex: 1;
     }
 }
