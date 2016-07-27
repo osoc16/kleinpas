@@ -1,12 +1,18 @@
+/**
+ * Styles
+ * Contain only imports
+ * If you need quick fixes, add them to `_shame.scss`
+ */
+
 @import 'settings.colors';
 @import 'settings.fonts';
-@import 'settings.main';
+
+@import 'elements.main';
+@import 'elements.typography';
 
 @import 'buttons';
 @import 'error';
 @import 'form';
-@import 'header';
 @import 'promo';
-@import 'illustration';
-// @import 'shame';
-@import 'typography';
+
+@import 'shame';

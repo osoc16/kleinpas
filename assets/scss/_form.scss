@@ -1,4 +1,6 @@
-/* form box */
+/**
+ * Form box
+ */
 
 /*
     form — "wanneer"
@@ -12,7 +14,7 @@
     box-shadow: inset -3px 0px 3px 0px rgba($gray, 0.5);
 }
 
-div.date-time {
+.date-time {
     border-radius: 10px;
     background-color: $gray;
     border-bottom: 2px solid $primary-red;
