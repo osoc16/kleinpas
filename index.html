@@ -10,35 +10,57 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.3.2/css/simple-line-icons.css">
         <link href="https://fonts.googleapis.com/css?family=Karla|Montserrat" rel="stylesheet">
         <link rel="stylesheet" href="assets/css/styles.css">
+        <link rel="stylesheet" href="css/flexboxgrid.min.css" type="text/css">
 
     </head>
     <body>
+        <!-- messages start -->
+        <div id="darkness">
+            <div id="window">
+                <h2></h2>
+                <p></p>
+                <a><button id="ok">OK</button></a>
+            </div>
+        </div>
+        <!-- messages end -->
 
-        <div class="wrap">
-
-          <main>
+        <main class="wrap">
 
             <article class="conversion-box">
-                <div class="logo">
-                    <img src="assets/img/logo_kleinpas.png" class="lol">
-                </div>
                 <div class="form-box">
                     <div class="content-notify">
-                        <h1 class="tagline">Een oppas nodig?<br>Stel een herinnering in.</h1>
-
                         <div class="notification-when">
-                            <p class="vraag">Wanneer</p>
+                            <!-- <h1>Stel je herinnering in.</h1> -->
+                            <h1 class="tagline">Een oppas nodig?<br>Stel een herinnering in.</h1>
+                            <h2 class="subtitle">Waar &amp; wanneer</h2>
 
                             <div class="date-time">
                                 <span class="time-field">
-                                    <i class="lines-icon icon-calendar dt-icon"></i>
-                                    <p>Dag:</p>
-                                    <input type="date" name="babysit-date" id="babysit-date"/>
+                                    <div class="label">
+                                        <i class="lines-icon icon-location-pin dt-icon"></i>
+                                        <p>Locatie:</p>
+                                    </div>
+                                    <div class="input">
+                                        <input type="place" name="place" id="place" placeholder="Zeveneke"/>
+                                    </div>
                                 </span>
                                 <span class="time-field">
-                                    <i class="lines-icon icon-clock dt-icon"></i>
-                                    <p>Van:</p>
-                                    <span id="uur-field">
+                                    <div class="label">
+                                        <i class="lines-icon icon-calendar dt-icon"></i>
+                                        <p>Dag:</p>
+                                    </div>
+                                    <div class="input">
+                                        <input type="date" name="babysit-date" id="babysit-date"/>
+                                    </div>
+                                </span>
+                                <span class="time-field">
+                                    <div class="label">
+                                        <i class="lines-icon icon-clock dt-icon"></i>
+                                        <p>Uur:</p>
+                                    </div>
+                                    <div class="input">
+                                    <span id="hour-field">
+                                        <span class="label-inbetween">van</span>
                                         <select name="start-hour">
                                             <option value="00">00</option>
                                             <option value="01">01</option>
@@ -65,14 +87,17 @@
                                             <option value="22">22</option>
                                             <option value="23">23</option>
                                         </select>
-                                        <i>h</i>
+                                        <span class="select-arrow"><i class="lines-icon icon-arrow-down"></i></span>
+                                        <span class="label-inbetween-small">:</span>
                                         <select name="start-minute">
                                             <option value="00">00</option>
                                             <option value="15">15</option>
                                             <option value="30">30</option>
                                             <option value="45">45</option>
                                         </select>
-                                        <i id="tot">tot</i>
+                                        <span class="select-arrow"><i class="lines-icon icon-arrow-down"></i></span>
+                                        <br>
+                                        <span class="label-inbetween">tot</span>
                                         <select name="end-hour">
                                             <option value="00">00</option>
                                             <option value="01">01</option>
@@ -99,32 +124,28 @@
                                             <option value="22">22</option>
                                             <option value="23">23</option>
                                         </select>
-                                        <i>h</i>
+                                        <span class="select-arrow"><i class="lines-icon icon-arrow-down"></i></span>
+                                        <span class="label-inbetween-small">:</span>
                                         <select name="end-minute">
                                             <option value="00">00</option>
                                             <option value="15">15</option>
                                             <option value="30">30</option>
                                             <option value="45">45</option>
                                         </select>
+                                        <span class="select-arrow"><i class="lines-icon icon-arrow-down"></i></span>
                                     </span>
-                                </span>
-                                <span class="time-field">
-                                    <i class="lines-icon icon-location dt-icon"></i>
-                                    <p>Locatie:</p>
-                                    <input type="date" name="babysit-date" id="babysit-date"/>
                                 </span>
                             </div>
                         </div>
 
-                        <div class="notification-how">
-                            <p class="vraag">Waar</p>
+                        <!--<div class="notification-how">
+                            <h2 class="subtitle">Waar</h2>
                             <div class="notify-buttons">
                                 <div class="button-n-field">
                                     <div class="notify-button" id="sms">
                                         <div class="button-content">
                                             <i class="notify-icon lines-icon icon-speech"></i>
                                             <p class="notify-button-text">sms</p>
-                                            <!-- <i class="lines-icon icon-check" id="sms-check"></i> -->
                                         </div>
                                     </div>
                                     <div class="notify-field" id="textme">
@@ -137,63 +158,111 @@
                                         <div class="button-content">
                                             <i class="notify-icon lines-icon icon-envelope"></i>
                                             <p class="notify-button-text">mail</p>
-                                            <!-- <i class="lines-icon icon-check" id="mail-check"></i> -->
                                         </div>
                                     </div>
                                     <div class="notify-field" id="mailme">
                                         <input type="email" name="email" id="email" placeholder="Jouw email"/>
                                     </div>
                                 </div>
-                                <div class="button-n-field">
+                                <div class="button-n-field google">
                                     <div class="notify-button">
                                         <div class="button-content">
                                             <i class="notify-icon lines-icon icon-calendar"></i>
                                             <p class="notify-button-text">kalender</p>
-                                            <!--<a href="#"><span class="button-link"></span></a>-->
                                         </div>
                                     </div>
                                     <div class="notify-field" id="calreminder">
-                                        <p id="calfield"></p>
+                                        <p id="calfield">Download bestand</p>
                                     </div>
                                 </div>
                             </div>
+                        </div> -->
+
+                        <h2 class="subtitle">Ontvang je herinnering</h2>
+                        <div class="notification-medium">
+                            <ul>
+                                <li>
+                                    <input id="checkbox1" type="checkbox" id="sms">
+                                    <label for="checkbox1">
+                                        <i class="lines-icon icon-plus"></i>
+                                        <i class="lines-icon icon-check"></i>
+                                        Via sms
+                                    </label>
+                                    <div class="notify-field" id="textme">
+                                        <input type="text" name="phone" id="phone" placeholder="Typ je nummer"/>
+                                        <span class="white-line"></span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <input id="checkbox2" type="checkbox">
+                                    <label for="checkbox2">
+                                        <i class="lines-icon icon-plus"></i>
+                                        <i class="lines-icon icon-check"></i>
+                                        Via email
+                                    </label>
+                                    <div class="notify-field" id="mailme">
+                                        <input type="email" name="email" id="email" placeholder="Jouw email"/>
+                                    </div>
+                                </li>
+                                <li>
+                                    <input id="checkbox3" type="checkbox">
+                                    <label for="checkbox3">
+                                        <i class="lines-icon icon-plus"></i>
+                                        <i class="lines-icon icon-check"></i>
+                                        Via mijn kalender
+                                    </label>
+                                    <div class="notify-field" id="calreminder">
+                                        <p id="calfield">Download bestand</p>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
 
+
                         <button class="submit">Herinner mij!</button>
+
+                        <div id="dvData_google">
+                            <table>
+                                <tr>
+                                    <td>Subject</td>
+                                    <td>Start Date</td>
+                                    <td>Start Time</td>
+                                    <td>End Date</td>
+                                    <td>End Time</td>
+                                    <td>All day event</td>
+                                    <td>Description</td>
+                                </tr>
+                                <tr>
+                                    <td>Zoek een babysit!</td>
+                                    <td class="Start_Date"></td>
+                                    <td class="Start_Time"></td>
+                                    <td class="End_Date"></td>
+                                    <td class="End_Time"></td>
+                                    <td>false</td>
+                                    <td>Binnen 1 week is het je cultuureel event, zorg dat je een babysitter vind!</td>
+                                </tr>
+                                <tr>
+                                    <td>Cultuureel event!</td>
+                                    <td class="Start_Date_Later"></td>
+                                    <td class="Start_Time"></td>
+                                    <td class="End_Date_Later"></td>
+                                    <td class="End_Time"></td>
+                                    <td>false</td>
+                                    <td></td>
+                                </tr>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </article>
 
             <article class="promo-box">
-                <!-- <div class="illustration-box"> -->
-                    <img src="assets/img/illustration.svg" class="illustration">
-                <!-- </div> -->
-                <p class="footer_text">Een project van open Summer of code 2016</p>
+                <div><img src="assets/img/logo_kleinpas.svg" class="logo"></div>
+                <!-- <h1 class="tagline">Een oppas nodig?<br>Stel een herinnering in.</h1> -->
+                <img src="assets/img/illustration.svg" class="illustration">
+                <p class="footer">Een project van <a href="http://www.openknowledge.be/" target="_blank">Open Knowledge Foundation Belgium</a></p>
             </article>
-
-          </main>
-
-        </div>
-
-
-        <!-- messages start
-        <div id="darkness">
-            <div id="window">
-                <h2></h2>
-                <p></p>
-                <button id="ok">OK</button>
-            </div>
-        </div>
-        <!-- messages end -->
-<!--
-        <div class="container">
-            <div class="conversion-side box">
-
-            </div>
-            <div class="illustration-side box">
-                test
-            </div>
-        </div> -->
+        </main>
     </body>
 
     <script src="assets/js/jquery-3.1.0.min.js"></script>
