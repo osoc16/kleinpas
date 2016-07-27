@@ -40,7 +40,7 @@
                                         <p>Locatie:</p>
                                     </label>
                                     <div class="input">
-                                        <input type="text" type="place" name="place" id="place" placeholder="Zeveneke"/>
+                                        <input type="text" type="place" name="place" id="place" placeholder="Typ uw adres"/>
                                     </div>
                                 </span>
                                 <span class="time-field">
@@ -53,13 +53,13 @@
                                     </div>
                                 </span>
                                 <span class="time-field">
-                                    <label class="label" for="start-hour">
+                                    <div class="label">
                                         <i class="lines-icon icon-clock dt-icon"></i>
                                         <p>Uur:</p>
-                                    </label>
+                                    </div>
                                     <div class="input">
                                     <span id="hour-field">
-                                        <span class="label-inbetween">van</span>
+                                        <label class="label-inbetween" for="start-hour">van</label>
                                         <select name="start-hour">
                                             <option value="00">00</option>
                                             <option value="01">01</option>
@@ -96,7 +96,7 @@
                                         </select>
                                         <span class="select-arrow"><i class="lines-icon icon-arrow-down"></i></span>
                                         <br>
-                                        <span class="label-inbetween">tot</span>
+                                        <label class="label-inbetween" for="end-hour">tot</label>
                                         <select name="end-hour">
                                             <option value="00">00</option>
                                             <option value="01">01</option>
