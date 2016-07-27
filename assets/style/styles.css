@@ -29,6 +29,8 @@ main {
   text-align: left;
   padding-bottom: 100px;
   overflow: auto; }
+  main section {
+    display: flex; }
   main .section__image,
   main .section__text {
     float: left;
@@ -36,11 +38,14 @@ main {
   main .section__image {
     width: 320px;
     text-align: center;
-    padding-top: 30px; }
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  main .section__image img {
+    width: 200px;
+    height: 200px; }
   main .section__text {
     width: 640px; }
-  main .section__text:nth-child(odd) {
-    text-align: right; }
   main p {
     color: #113d70;
     padding: 20px 40px;
@@ -51,10 +56,10 @@ main {
     font-family: 'Montserrat', Arial;
     font-size: 2.5rem;
     padding: 40px 40px 20px;
-    text-align: center;
-    text-align: justify; }
+    text-align: center; }
   main .team {
-    margin-top: 30px; }
+    margin-top: 30px;
+    display: block; }
     main .team h1, main .team h2, main .team h3 {
       text-align: center; }
     main .team h2 {
@@ -96,5 +101,50 @@ footer {
   width: 100%;
   min-height: 250px;
   background: #ff6054; }
+
+@media (max-width: 960px) {
+  main {
+    width: 100%;
+    border-radius: 0; }
+    main section {
+      display: block; }
+    main .section__image {
+      width: 100%; }
+    main .section__text {
+      width: 100%; }
+    main section:nth-child(even) .section__image {
+      display: none; }
+    main h1 {
+      line-height: 130%; }
+    main .team {
+      margin-top: 30px; }
+      main .team h1, main .team h2, main .team h3 {
+        text-align: center; }
+      main .team h2 {
+        font-family: 'Montserrat', Arial;
+        font-size: 1.5rem;
+        color: #ff6054; }
+      main .team .section__team {
+        height: auto;
+        width: 100%;
+        margin: 0;
+        display: block;
+        text-align: center;
+        margin-bottom: 50px; }
+        main .team .section__team .section__person {
+          width: 100%;
+          float: none;
+          margin-top: 30px; }
+          main .team .section__team .section__person .person__links {
+            display: block; }
+            main .team .section__team .section__person .person__links a {
+              margin: 5px 5% 15px;
+              width: 90%;
+              float: none; }
+            main .team .section__team .section__person .person__links a:hover {
+              text-decoration: underline; }
+          main .team .section__team .section__person .person__picture {
+            width: 60%;
+            height: 60%; } }
 
 /*# sourceMappingURL=styles.css.map */

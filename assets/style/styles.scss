@@ -39,6 +39,10 @@ main {
     padding-bottom: 100px;
     overflow: auto;
 
+    section {
+        display: flex;
+    }
+
     .section__image,
     .section__text {
         float: left;
@@ -48,15 +52,19 @@ main {
     .section__image {
         width: 320px;
         text-align: center;
-        padding-top: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .section__image img {
+        width: 200px;
+        height: 200px;
     }
 
     .section__text {
         width: 640px;
-    }
-
-    .section__text:nth-child(odd) {
-        text-align: right;
     }
 
     p {
@@ -72,11 +80,11 @@ main {
         font-size: 2.5rem;
         padding: 40px 40px 20px;
         text-align: center;
-        text-align: justify;
     }
 
     .team {
         margin-top: 30px;
+        display: block;
 
         h1, h2, h3 {
             text-align: center;
@@ -136,4 +144,79 @@ footer {
     width: 100%;
     min-height: 250px;
     background: $c_red;
+}
+
+@media(max-width: 960px) {
+    main {
+        width: 100%;
+        border-radius: 0;
+
+        section {
+            display: block;
+        }
+
+        .section__image {
+            width: 100%;
+        }
+
+        .section__text {
+            width: 100%;
+        }
+
+        section:nth-child(even) .section__image {
+            display: none;
+        }
+
+        h1 {
+            line-height: 130%;
+        }
+
+        .team {
+            margin-top: 30px;
+
+            h1, h2, h3 {
+                text-align: center;
+            }
+
+            h2 {
+                font-family: 'Montserrat', Arial;
+                font-size: 1.5rem;
+                color: $c_red;
+            }
+
+            .section__team {
+                height: auto;
+                width: 100%;
+                margin: 0;
+                display: block;
+                text-align: center;
+                margin-bottom: 50px;
+
+                .section__person {
+                    width: 100%;
+                    float: none;
+                    margin-top: 30px;
+
+                    .person__links {
+                        display: block;
+
+                        a {
+                            margin: 5px 5% 15px;
+                            width: 90%;
+                            float: none;
+                        }
+
+                        a:hover {
+                            text-decoration: underline;
+                        }
+                    }
+
+                    .person__picture {
+                        width: 60%;
+                        height: 60%;
+                    }
+                }
+            }
+        }
+    }
 }
