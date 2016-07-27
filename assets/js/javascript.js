@@ -138,7 +138,7 @@ function sendData()
             },
             "data": dataToSend
         }).done(function (response) {
-            showMessage('Hoera!', 'Bedankt om kleinpas te gebruiken!\nU krijgt een herinnering een week voor de gekozen datum!');
+            showMessage('Hoera!', 'Bedankt om kleinpas te gebruiken!\nU krijgt een herinnering een week voor de gekozen datum.');
             console.log(response);
         });
     }
@@ -168,7 +168,7 @@ function checkForm()
             if (isNaN(phonenumber))
             {
                 console.log('%cERROR: phonenumber isnt a number!', 'color: red');
-                showMessage('Sorry', 'Dat is geen geldig telefoonnummer!');
+                showMessage('Sorry . . .', 'We denken dat je telefoonnummer een foutje bevat. Kijk je het even na?');
                 return false;
             }
             else
@@ -182,7 +182,7 @@ function checkForm()
             if (email.value.indexOf('@') < 1)
             {
                 console.log('%cERROR: email isnt an email!', 'color: red');
-                showMessage('Sorry', 'Dat is geen geldige email!');
+                showMessage('Sorry . . .', 'We denken dat je e-mailadres een foutje bevat. Kijk je het even na?');
                 return false;
             }
             else
@@ -258,23 +258,23 @@ function checkForm()
             }
             else
             {
-                console.log('%cERROR: that day has already passed!', 'color: red;');
-                showMessage('Sorry', 'Die dag is al gepasseerd!');
+                console.log('%cERROR: that day has already passed.', 'color: red;');
+                showMessage('Sorry . . .', 'Die dag is al gepasseerd. Vul je alsjeblieft een datum in de toekomst in?');
                 return false;
             }
 
         }
         else
         {
-            showMessage('Sorry', 'Kies een datum!');
+            showMessage('Sorry . . .', 'Het lijkt er op dat je geen datum hebt ingevuld. Om je te herinneren hebben we die wel nodig. Vul je hem aan?');
             console.log('%cERROR: pick a date! ', 'color: red');
             return false;
         }
     }
     else
     {
-        showMessage('Sorry', 'Noteer een telefoonnummer, e-mailadres of selecteer de kalender!');
-        console.log('%cERROR: insert either calender, phone or email!', 'color: red');
+        showMessage('Sorry . . .', 'Noteer een telefoonnummer, e-mailadres of selecteer de kalender.');
+        console.log('%cERROR: insert either calender, phone or email.', 'color: red');
         return false;
     }
 }
