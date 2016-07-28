@@ -68,6 +68,9 @@ select {
     color: $primary-blue-dark;
     border-bottom: 1px solid $primary-blue-dark;
     border-radius: 0;
+    background: url('../img/chevron-down.png') no-repeat #FEFEFE;
+    background-position: right 3px center;
+    background-size: 20%;
     -webkit-appearance: none;
     -webkit-border-radius: 0px;
     padding-right: 1.5em;
