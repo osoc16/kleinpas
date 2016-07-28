@@ -90,7 +90,7 @@ $(".smsClick").on("click", function() {
 $(".emailClick").on("click", function() {
     if (emailOn == false) emailOn = true;
     else emailOn = false;
-    console.log(emailOn);
+    // console.log(emailOn);
 });
 
 // Calender click
@@ -129,7 +129,7 @@ function sendData()
             "data": dataToSend
         }).done(function (response) {
             showMessage('Hoera!', 'Bedankt om kleinpas te gebruiken!\nU krijgt een herinnering een week voor de gekozen datum.');
-            console.log(response);
+            // console.log(response);
         });
     }
 
