@@ -13,29 +13,45 @@
     display: none;
 }
 
+.o-modal__window {
+    border-radius: $radius;
+    background-color: $gray-light;
+    margin: 100px auto;
+    width: 300px;
+    min-width: 35em;
+    border-bottom: 2px solid $primary-red;
+    margin-bottom: 2.5em;
+    padding: 2em 2.5em;
+}
+
+.o-modal__window h2 {
+    font-size: 2.4em;
+    color: $primary-red;
+    font-weight: 600;
+    line-height: 1.2;
+    text-align: left;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.o-modal__window p {
+    font-size: 1.3em;
+    padding: 1em 0;
+}
+
+@media (max-width: $bp1) {
+
     .o-modal__window {
-        border-radius: $radius;
-        background-color: $gray-light;
-        margin: 100px auto;
-        width: 300px;
+        box-sizing: border-box;
+        border-radius: 0;
+        background: red;
+        margin: 100px 0;
+        width: 100%;
         min-width: 35em;
         border-bottom: 2px solid $primary-red;
         margin-bottom: 2.5em;
-        padding: 2em 2.5em;
+        padding: 2em 1em;
     }
 
-        .o-modal__window h2 {
-            font-size: 2.4em;
-            color: $primary-red;
-            font-weight: 600;
-            line-height: 1.2;
-            text-align: left;
-            width: 100%;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .o-modal__window p {
-            font-size: 1.3em;
-            padding: 1em 0;
-        }
+}
