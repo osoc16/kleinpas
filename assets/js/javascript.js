@@ -1,3 +1,12 @@
+Date.prototype.toDateInputValue = (function() {
+    var local = new Date(this);
+    local.setMinutes(this.getMinutes() - this.getTimezoneOffset());
+    return local.toJSON().slice(0,10);
+});
+
+document.querySelector('input[type=date]').value = new Date().toDateInputValue();
+$("select[name='start-hour']").click();
+
 function exportTableToCSV($table, filename) {
     var $rows = $table.find('tr:has(td)'),
 
@@ -125,7 +134,7 @@ function checkForm()
     {
         if (phonenumber != "")
         {
-            if (isNaN(phonenumber))
+            if (isNaN(phonenumber) || phonenumber.length != 10)
             {
                 // console.log('%cERROR: phonenumber isnt a number!', 'color: red');
                 showMessage('Sorry . . .', 'We denken dat je telefoonnummer een foutje bevat. Kijk je het even na?');
