@@ -77,6 +77,21 @@ var phone = document.querySelector('input[name=phone]');
 var email = document.querySelector('input[name=email]');
 var place = document.querySelector('input[name=place]');
 var calender = "";
+var smsOn = false;
+var emailOn = false;
+
+// SMS click
+$(".smsClick").on("click", function() {
+    if (smsOn == false) smsOn = true;
+    else smsOn = false;
+});
+
+// Email click
+$(".emailClick").on("click", function() {
+    if (emailOn == false) emailOn = true;
+    else emailOn = false;
+    console.log(emailOn);
+});
 
 // Calender click
 $(".calenderClick").on("click", function() {
@@ -89,9 +104,15 @@ function sendData()
     // Check everything
     if (checkForm())
     {
+        if (smsOn == false) phoneText = "";
+        else phoneText = phone.value;
+
+        if (emailOn == false) emailText = "";
+        else emailText = email.value;
+
         var dataToSend = {
-            "email": email.value,
-            "phonenumber": phone.value,
+            "email": emailText,
+            "phonenumber": phoneText,
             "date": date.value,
             "place": place.value,
             "start": time_start_hour.value + ":" + time_start_minutes.value + ":00",
@@ -108,7 +129,7 @@ function sendData()
             "data": dataToSend
         }).done(function (response) {
             showMessage('Hoera!', 'Bedankt om kleinpas te gebruiken!\nU krijgt een herinnering een week voor de gekozen datum.');
-            // console.log(response);
+            console.log(response);
         });
     }
 
@@ -132,112 +153,121 @@ function checkForm()
 
     if (calender != "" || phonenumber != "" || email.value != "")
     {
-        if (phonenumber != "")
+        if (smsOn == false && emailOn == false && calender == "")
         {
-            if (isNaN(phonenumber) || phonenumber.length != 10)
-            {
-                // console.log('%cERROR: phonenumber isnt a number!', 'color: red');
-                showMessage('Sorry . . .', 'We denken dat je telefoonnummer een foutje bevat. Kijk je het even na?');
-                return false;
-            }
-            else
-            {
-                // console.log('%cSUCCESS: phonenumber is fine!', 'color: green');
-            }
-        }
-
-        if (email.value != "")
-        {
-            if (email.value.indexOf('@') < 1)
-            {
-                // console.log('%cERROR: email isnt an email!', 'color: red');
-                showMessage('Sorry . . .', 'We denken dat je e-mailadres een foutje bevat. Kijk je het even na?');
-                return false;
-            }
-            else
-            {
-                // console.log('%cSUCCESS: email is fine!', 'color: green');
-            }
-        }
-
-        // console.log("checking date");
-        if (date.value != "")
-        {
-            // Check if date hasnt passed yet
-            var inputDate = new Date(date.value);
-            var todaysDate = new Date();
-
-            if (inputDate.setHours(0,0,0,0) > todaysDate.setHours(0,0,0,0))
-            {
-                // Setup data for calender
-                if (calender == "google")
-                {
-                    $(".Start_Date_Later").html(date.value);
-
-                    if (parseInt(time_end_hour.value) < parseInt(time_start_hour.value))
-                    {
-                        // Event lasts untill next day
-                        var newdate = new Date(date.value);
-                        newdate.setDate(newdate.getDate() + 1);
-                        $(".End_Date_Later").html(formatDate(newdate));
-                        // console.log(formatDate(newdate));
-                    }
-                    else
-                    {
-                        $(".End_Date_Later").html(date.value);
-                    }
-
-                    $(".Start_Time").html(time_start_hour.value + ":" + time_start_minutes.value);
-                    $(".End_Time").html(time_end_hour.value + ":" + time_end_minutes.value);
-
-                    // Reduce a week
-                    var today = new Date(date.value);
-                    var lastWeekDate = new Date(today.setDate(today.getDate() - 7));
-                    var formattedDate = formatDate(lastWeekDate);
-
-                    $(".Start_Date").html(formattedDate);
-
-                    if (parseInt(time_end_hour.value) < parseInt(time_start_hour.value))
-                    {
-                        // Event lasts untill next day
-                        var newdate = new Date(formattedDate);
-                        newdate.setDate(newdate.getDate() + 1);
-                        $(".End_Date").html(formatDate(newdate));
-                        // console.log(formatDate(newdate));
-                    }
-                    else
-                    {
-                        $(".End_Date").html(formattedDate);
-                    }
-
-                    // Click event export
-                    $("#ok").parent().addClass("export");
-                    $("#ok").parent().attr("href", "#");
-                    $("#ok").children().text("Downloaden");
-
-                    $(".export").on('click', function (event) {
-                        exportTableToCSV.apply(this, [$('#dvData_google>table'), 'kleinpas.csv']);//'+place.value+'
-                        $("#ok").children().text("OK");
-                    });
-                }
-
-                // SEND THE DATA
-                // console.log('%cSUCCESS: everything is fine!', 'background: green; color: white;');
-                return true;
-            }
-            else
-            {
-                // console.log('%cERROR: that day has already passed.', 'color: red;');
-                showMessage('Sorry . . .', 'Die dag is al gepasseerd. Vul je alsjeblieft een datum in de toekomst in?');
-                return false;
-            }
-
+            showMessage('Sorry . . .', 'We kunnen je alleen verwittigen als je een telefoonnummer of e-mailadres invult, of een kalenderuitnodiging selecteert.');
+            // console.log('%cERROR: insert either calender, phone or email.', 'color: red');
+            return false;
         }
         else
         {
-            showMessage('Sorry . . .', 'Het lijkt er op dat je geen datum hebt ingevuld. Om je te herinneren hebben we die wel nodig. Vul je hem aan?');
-            // console.log('%cERROR: pick a date! ', 'color: red');
-            return false;
+            if (phonenumber != "")
+            {
+                if (isNaN(phonenumber) || phonenumber.length != 10)
+                {
+                    // console.log('%cERROR: phonenumber isnt a number!', 'color: red');
+                    showMessage('Sorry . . .', 'We denken dat je telefoonnummer een foutje bevat. Kijk je het even na?');
+                    return false;
+                }
+                else
+                {
+                    // console.log('%cSUCCESS: phonenumber is fine!', 'color: green');
+                }
+            }
+
+            if (email.value != "")
+            {
+                if (email.value.indexOf('@') < 1)
+                {
+                    // console.log('%cERROR: email isnt an email!', 'color: red');
+                    showMessage('Sorry . . .', 'We denken dat je e-mailadres een foutje bevat. Kijk je het even na?');
+                    return false;
+                }
+                else
+                {
+                    // console.log('%cSUCCESS: email is fine!', 'color: green');
+                }
+            }
+
+            // console.log("checking date");
+            if (date.value != "")
+            {
+                // Check if date hasnt passed yet
+                var inputDate = new Date(date.value);
+                var todaysDate = new Date();
+
+                if (inputDate.setHours(0,0,0,0) > todaysDate.setHours(0,0,0,0))
+                {
+                    // Setup data for calender
+                    if (calender == "google")
+                    {
+                        $(".Start_Date_Later").html(date.value);
+
+                        if (parseInt(time_end_hour.value) < parseInt(time_start_hour.value))
+                        {
+                            // Event lasts untill next day
+                            var newdate = new Date(date.value);
+                            newdate.setDate(newdate.getDate() + 1);
+                            $(".End_Date_Later").html(formatDate(newdate));
+                            // console.log(formatDate(newdate));
+                        }
+                        else
+                        {
+                            $(".End_Date_Later").html(date.value);
+                        }
+
+                        $(".Start_Time").html(time_start_hour.value + ":" + time_start_minutes.value);
+                        $(".End_Time").html(time_end_hour.value + ":" + time_end_minutes.value);
+
+                        // Reduce a week
+                        var today = new Date(date.value);
+                        var lastWeekDate = new Date(today.setDate(today.getDate() - 7));
+                        var formattedDate = formatDate(lastWeekDate);
+
+                        $(".Start_Date").html(formattedDate);
+
+                        if (parseInt(time_end_hour.value) < parseInt(time_start_hour.value))
+                        {
+                            // Event lasts untill next day
+                            var newdate = new Date(formattedDate);
+                            newdate.setDate(newdate.getDate() + 1);
+                            $(".End_Date").html(formatDate(newdate));
+                            // console.log(formatDate(newdate));
+                        }
+                        else
+                        {
+                            $(".End_Date").html(formattedDate);
+                        }
+
+                        // Click event export
+                        $("#ok").parent().addClass("export");
+                        $("#ok").parent().attr("href", "#");
+                        $("#ok").children().text("Downloaden");
+
+                        $(".export").on('click', function (event) {
+                            exportTableToCSV.apply(this, [$('#dvData_google>table'), 'kleinpas.csv']);//'+place.value+'
+                            $("#ok").children().text("OK");
+                        });
+                    }
+
+                    // SEND THE DATA
+                    // console.log('%cSUCCESS: everything is fine!', 'background: green; color: white;');
+                    return true;
+                }
+                else
+                {
+                    // console.log('%cERROR: that day has already passed.', 'color: red;');
+                    showMessage('Sorry . . .', 'Die dag is al gepasseerd. Vul je alsjeblieft een datum in de toekomst in?');
+                    return false;
+                }
+
+            }
+            else
+            {
+                showMessage('Sorry . . .', 'Het lijkt er op dat je geen datum hebt ingevuld. Om je te herinneren hebben we die wel nodig. Vul je hem aan?');
+                // console.log('%cERROR: pick a date! ', 'color: red');
+                return false;
+            }
         }
     }
     else
